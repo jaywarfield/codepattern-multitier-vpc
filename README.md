@@ -4,7 +4,7 @@
 
 Automate deployment on [IBM Cloud](https://www.ibm.com/cloud) to facilitate development, testing, and deployment of workloads in [IBM Cloud VPC Infrastructure](https://www.ibm.com/cloud/vpc) utilizing [IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started), [HashiCorp's Terraform](https://www.terraform.io/), and [Red Hat's Ansible](https://www.redhat.com/en/technologies/management/ansible).
   
-A [multitier](https://en.wikipedia.org/wiki/Multitier_architecture) architecture leverages VPC for public cloud isolation that separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs. Other features include Global DDOS, Global Load Balancing, VPN-as-a-Service and Bastion to estabilish remote secure connectivity between onprem and VPC, and SysDig and LogDNA for infrastructure and application monitoring. [WordPress](https://wordpress.com), a popular web, blog and e-commerce platform, is deployed into two different available zones. [MySQL](https://www.mysql.com), a typical open source database, is deployed on multiple database servers with a master/slave data replication strategy across two availability zones and installed on a [LAMP stack](https;//en.wikipedia.org/wiki/LAMP). [Nginx](https://www.nginx.com/) and [Nginx Unit](https://www.nginx.com/products/nginx-unit/) are used as the Web Server and Application Servers respectively.
+A [multitier](https://en.wikipedia.org/wiki/Multitier_architecture) architecture leverages VPC for public cloud isolation that separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs. Other features include Global DDOS, Global Load Balancing, VPN-as-a-Service and Bastion to estabilish remote secure connectivity between onprem and VPC, and SysDig and LogDNA for infrastructure and application monitoring. [WordPress](https://wordpress.com), a popular web, blog and e-commerce platform, is deployed into two different available zones. [MySQL](https://www.mysql.com), a typical open source database, is deployed on multiple database servers with a source/replica data replication strategy across two availability zones and installed on a [LAMP stack](https;//en.wikipedia.org/wiki/LAMP). [Nginx](https://www.nginx.com/) and [Nginx Unit](https://www.nginx.com/products/nginx-unit/) are used as the Web Server and Application Servers respectively.
 
 The main objectives of this project is to educate enterprise DevOps users and system administrators on how to leverage both the features of [IBM Cloud VPC Infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-about-vpc) 
 as well as how to use the [IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm) and Ansible to deploy and fully configure a working n-tier application.
@@ -25,7 +25,7 @@ High Level Architecture
 2. Application
   - A horizontally scaleable web application deployed into a two different availability zones
   - Multiple database servers across two availability zones
-  - A master/slave data replication strategy across availability zones
+  - A source/replica data replication strategy across availability zones
 
 ## VPC Architecture
 Below is the IBM Virtual Private Cloud (VPC) architecture of the solution showing public isolation for both Application (through a Load Balancer) and data.
