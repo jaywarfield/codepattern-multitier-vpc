@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Demonstrate [Infrastructure-as-Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) to automate deployment on [IBM Cloud](https://www.ibm.com/cloud) and facilitate development, testing, and deployment of workloads in [IBM Cloud VPC Infrastructure](https://www.ibm.com/cloud/vpc) utilizing [IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started), [HashiCorp's Terraform](https://www.terraform.io/), and [Red Hat's Ansible](https://www.redhat.com/en/technologies/management/ansible).
+Automate deployment on [IBM Cloud](https://www.ibm.com/cloud) to facilitate development, testing, and deployment of workloads in [IBM Cloud VPC Infrastructure](https://www.ibm.com/cloud/vpc) utilizing [IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started), [HashiCorp's Terraform](https://www.terraform.io/), and [Red Hat's Ansible](https://www.redhat.com/en/technologies/management/ansible).
   
 A [n-tier](https://en.wikipedia.org/wiki/Multitier_architecture) architecture was chosen as a typical cloud workload for this example.   A n-tier architecture separates the web / application and data tiers
 by placing them into separate sub-networks which are logically isolated using virtual network security constructs which can be defined and configured via an API.   [WordPress](https://wordpress.com),
