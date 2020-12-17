@@ -2,10 +2,10 @@
 output "app_name" {
 value = "${var.dns-name}${var.domain}"
 }
-output "master_db" {
+output "source_db" {
 value = module.backend.dbserver-zone1-ip
 }
-output "slave_db" {
+output "replica_db" {
 value = module.backend.dbserver-zone2-ip
 }
 output "webappserver1" {
@@ -26,7 +26,7 @@ value = "ssh root@${module.bastion.bastionserver-zone1-fip}"
 output "ssh-webappserver1" {
 value = "ssh -o ProxyJump=root@${module.bastion.bastionserver-zone1-fip} root@${module.frontend.webappserver-zone1-ip}"
 }
-output "ssh-masterdb" {
+output "ssh-sourcedb" {
 value = "ssh -o ProxyJump=root@${module.bastion.bastionserver-zone1-fip} root@${module.backend.dbserver-zone1-ip}"
 }
 output "ssh-bastionserver2" {
@@ -35,7 +35,7 @@ value = "ssh root@${module.bastion.bastionserver-zone2-fip}"
 output "ssh-webappserver2" {
 value = "ssh -o ProxyJump=root@${module.bastion.bastionserver-zone2-fip} root@${module.frontend.webappserver-zone2-ip}"
 }
-output "ssh-slavedb" {
+output "ssh-replicadb" {
 value = "ssh -o ProxyJump=root@${module.bastion.bastionserver-zone2-fip} root@${module.backend.dbserver-zone2-ip}"
 }
 output "ansible-bastion" {
