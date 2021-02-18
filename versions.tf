@@ -5,7 +5,7 @@ required_version = ">= 0.13.5"
 required_providers {
 ibm = {
 source = "ibm-cloud/ibm"
-version = "1.14.0"
+version = "1.19.0"
 }
 }
 }
