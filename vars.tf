@@ -61,7 +61,7 @@ default = "172.21.9.0/24"
 }
 variable "ssh-public-key" {
 description = "Define ssh key location for compute instances"
-default = ""
+default = "~/.ssh/id_rsa.pub"
 }
 variable "image" {
 description = "Define OS image for compute instances"
