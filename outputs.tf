@@ -38,6 +38,3 @@ value = "ssh -o ProxyJump=root@${module.bastion.bastionserver-zone2-fip} root@${
 output "ssh-replicadb" {
 value = "ssh -o ProxyJump=root@${module.bastion.bastionserver-zone2-fip} root@${module.backend.dbserver-zone2-ip}"
 }
-output "ansible-bastion" {
-value = "ansible-playbook -i inventory --ssh-extra-args='-J root@${module.bastion.bastionserver-zone1-fip}' site.yaml"
-}

@@ -97,23 +97,3 @@ bastion-subnet-zone2-id = module.vpc.bastion-subnet-zone2-id
 bastion-securitygroup-id = module.access.bastion-securitygroup-id
 maintenance-securitygroup-id = module.access.maintenance-securitygroup-id
 }
-module "ansible" {
-source = "./ansible"
-vpc-name = var.vpc-name
-resource-group = var.resource-group
-region = var.region
-zone1 = var.zone1
-zone2 = var.zone2
-bastionserver-name = var.bastionserver-name
-profile-bastionserver = var.profile-bastionserver
-image = var.image
-group-id = module.access.group-id
-sshkey-id = module.access.sshkey-id
-vpc-id = module.vpc.vpc-id
-bastion-subnet-zone1-id = module.vpc.bastion-subnet-zone1-id
-bastion-subnet-zone2-id = module.vpc.bastion-subnet-zone2-id
-bastionserver-zone1-fip = module.bastion.bastionserver-zone1-fip
-bastionserver-zone2-fip = module.bastion.bastionserver-zone2-fip
-bastion-securitygroup-id = module.access.bastion-securitygroup-id
-maintenance-securitygroup-id = module.access.maintenance-securitygroup-id
-}
