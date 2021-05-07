@@ -63,7 +63,7 @@ resource "null_resource" "ansible" {
 #   description = "IBM Cloud API key when run standalone"
 # }
 
-variable "workspace_id" {
-  description = "Id of the source Schematics Workspace for target VSIs"
-  default = "us-east.workspace.jwwworkspace.40e8e98e"  
-}
+#variable "workspace_id" {
+#  description = "Id of the source Schematics Workspace for target VSIs"
+#  default     = "ssh_bastion-host-0353ce37-3748-4c"
+#}

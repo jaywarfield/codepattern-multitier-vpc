@@ -94,6 +94,8 @@ sshkey-id = module.access.sshkey-id
 vpc-id = module.vpc.vpc-id
 bastion-subnet-zone1-id = module.vpc.bastion-subnet-zone1-id
 bastion-subnet-zone2-id = module.vpc.bastion-subnet-zone2-id
+bastionserver-zone1-fip = module.bastion.bastionserver-zone1-fip
+bastionserver-zone2-fip = module.bastion.bastionserver-zone2-fip
 bastion-securitygroup-id = module.access.bastion-securitygroup-id
 maintenance-securitygroup-id = module.access.maintenance-securitygroup-id
 }
