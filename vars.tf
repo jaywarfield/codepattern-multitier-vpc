@@ -60,8 +60,7 @@ description = "Define dbtier subnet cidr for zone2"
 default = "172.21.9.0/24"
 }
 variable "ssh-public-key" {
-description = "Define ssh key location for compute instances"
-default = "~/.ssh/id_rsa.pub"
+description = "Define ssh key for compute instances"
 }
 variable "image" {
 description = "Define OS image for compute instances"
