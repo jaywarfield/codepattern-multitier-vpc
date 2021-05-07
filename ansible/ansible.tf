@@ -28,7 +28,7 @@ resource "null_resource" "ansible" {
     #host         = "0.0.0.0"
     #private_key = "${file("~/.ssh/ansible")}"
     #private_key = var.ssh_private_key
-    bastion_host = module.bastion.bastionserver-zone1-fip
+    bastion_host = var.bastionserver-zone1-fip
     host_key = var.sshkey-id
     type = "ssh"
   }
