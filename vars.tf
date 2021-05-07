@@ -64,7 +64,7 @@ description = "Define ssh key for compute instances"
 }
 variable "image" {
 description = "Define OS image for compute instances"
-default = "r006-ed3f775f-ad7e-4e37-ae62-7199b4988b00"
+default = "r006-de4fc543-2ce1-47de-b0b8-b98556a741da"
 }
 variable "webappserver-name" {
 description = "Define webapp instance name"
