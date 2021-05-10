@@ -1,0 +1,7 @@
+- name: Configure and deploy the web and application code to webapptier
+  hosts: 172.21.0.4, 172.21.8.4
+  remote_user: root
+  gather_facts: no
+
+  roles:
+    - web
