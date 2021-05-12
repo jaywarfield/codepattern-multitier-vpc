@@ -1,3 +1,0 @@
-- import_playbook: configure-common.yml
-- import_playbook: configure-dbtier.yml
-- import_playbook: configure-webapptier.yml

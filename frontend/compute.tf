@@ -17,7 +17,7 @@ security_groups = [var.webapptier-securitygroup-id, var.maintenance-securitygrou
 }
 user_data = data.template_cloudinit_config.cloudinit-webapptier.rendered
 resource_group = var.group-id
-tags = ["webapptier", "zone1"]
+tags = ["webapptier"]
 count = var.webappserver-count
 }
 # Create instances in webapp subnet in zone2
@@ -38,7 +38,7 @@ security_groups = [var.webapptier-securitygroup-id, var.maintenance-securitygrou
 }
 user_data = data.template_cloudinit_config.cloudinit-webapptier.rendered
 resource_group = var.group-id
-tags = ["webapptier", "zone2"]
+tags = ["webapptier"]
 count = var.webappserver-count
 }
 # Assign Floating IPs to instances of Web Servers in zone1

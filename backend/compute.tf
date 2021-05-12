@@ -17,7 +17,7 @@ security_groups = [var.dbtier-securitygroup-id, var.maintenance-securitygroup-id
 }
 user_data = data.template_cloudinit_config.cloudinit-dbtier.rendered
 resource_group = var.group-id
-tags = ["dbtier", "source", "zone1"]
+tags = ["dbtier", "sourcedb"]
 count = var.dbserver-count
 }
 # Create instances in db subnet in zone2
@@ -38,6 +38,6 @@ security_groups = [var.dbtier-securitygroup-id, var.maintenance-securitygroup-id
 }
 user_data = data.template_cloudinit_config.cloudinit-dbtier.rendered
 resource_group = var.group-id
-tags = ["dbtier", "replica", "zone2"]
+tags = ["dbtier", "replicadb"]
 count = var.dbserver-count
 }
