@@ -2,7 +2,7 @@
 resource "local_file" "addhosts" {
 filename = "/tmp/.schematics/addhosts.sh"
 content = <<EOT
-ssh-add ~/<PATH TO SSH PRIVATE KEY FILE>
+ssh-add ~/.ssh/id_rsa
 ssh-keyscan -H ${module.backend.dbserver-zone1-ip} >> ~/.ssh/known_hosts
 ssh-keyscan -H ${module.backend.dbserver-zone2-ip} >> ~/.ssh/known_hosts
 ssh-keyscan -H ${module.frontend.webappserver-zone1-ip} >> ~/.ssh/known_hosts
