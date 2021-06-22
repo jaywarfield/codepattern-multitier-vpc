@@ -24,7 +24,7 @@ packages:
  - python3-pip
  - mysql-client
  - mysql-server
- - python3-pymysql
+ - pymysql
 
 power_state:
  mode: reboot
