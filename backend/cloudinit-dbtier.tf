@@ -19,12 +19,6 @@ packages:
  - htop
  - git
  - supervisor
- - python3
- - python-pip
- - python3-pip
- - mysql-client
- - mysql-server
- - pymysql
 
 power_state:
  mode: reboot
