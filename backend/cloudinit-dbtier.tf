@@ -18,10 +18,10 @@ packages:
  - ntp
  - htop
  - git
+ - pip
  - supervisor
  - mysql-client
  - mysql-server
- - python3-mysql.connector
 
 power_state:
  mode: reboot
