@@ -19,6 +19,7 @@ packages:
  - htop
  - git
  - supervisor
+ - pymysql
 
 power_state:
  mode: reboot
