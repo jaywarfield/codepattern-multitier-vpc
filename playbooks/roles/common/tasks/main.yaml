@@ -19,7 +19,3 @@
 - name: Set LogDNA to autostart
   shell: systemctl enable logdna-agent
   become: yes
-
-#- name: Set /usr/bin/python to python3
-#  shell: update-alternatives --install /usr/bin/python python /usr/bin/python3 2 
-#  become: yes

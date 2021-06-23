@@ -1,0 +1,4 @@
+---
+# Configure mySQL sourcedb for wordpress
+
+- include: configure-replication-sourcedb.yaml

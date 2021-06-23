@@ -1,1 +1,3 @@
 - import_playbook: configure-dbtier.yaml
+- import_playbook: configure-dbtier1.yaml
+- import_playbook: configure-dbtier2.yaml

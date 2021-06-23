@@ -1,0 +1,4 @@
+---
+# Configure mySQL replicadb for wordpress
+
+- include: configure-replication-replicadb.yaml
