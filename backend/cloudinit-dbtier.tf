@@ -18,7 +18,7 @@ packages:
  - ntp
  - htop
  - git
- - pip
+ - python3-pip
  - supervisor
  - mysql-client
  - mysql-server

@@ -51,6 +51,7 @@ packages:
   - git
   - unzip
   - supervisor
+  - apache2
   - python3-pip
   - nginx-full
   - mysql-client
