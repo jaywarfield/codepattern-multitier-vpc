@@ -1,5 +1,10 @@
 ---
 # Basic Setup of MySQL
+- name: Install ansible python3 mysql dependency
+  apt:
+    name: python3-mysqldb
+    state: latest
+
 - name: Change mysqld.cnf to listen on all interfaces
   shell: |
     sed -i "s/^\(bind-address\s*=\s*\).*\$/\10.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
