@@ -1,1 +1,3 @@
+- import_playbook: configure-common.yaml
 - import_playbook: configure-dbtier.yaml
+- import_playbook: configure-webapptier.yaml
