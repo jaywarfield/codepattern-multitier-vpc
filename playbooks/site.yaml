@@ -1,1 +1,1 @@
-- import_playbook: configure-dbtiera.yaml
+- import_playbook: configure-dbtierb.yaml

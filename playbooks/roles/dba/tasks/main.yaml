@@ -2,11 +2,6 @@
 # Install mySQL for wordpress
 # Configure mySQL sourcedb for wordpress
 
-#- name: Install ansible python3 pymysql dependency
-#  shell: pip install pymysql
-#  become: yes
-#
-
 - name: Install ansible python3 pymysql dependency
   become: yes
   apt:
