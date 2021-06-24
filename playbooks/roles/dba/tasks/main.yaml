@@ -9,7 +9,7 @@
 
 - name: Install ansible python3 pymysql dependency
   become: yes
-  pip3:
+  pip:
     name: PyMySQL
     state: present
 
