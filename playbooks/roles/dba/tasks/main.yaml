@@ -7,19 +7,11 @@
 #  become: yes
 #
 
-- name: List installed packages before
-  shell: apt list --installed
-  become: yes
-
 - name: Install ansible python3 pymysql dependency
   become: yes
   pip:
-    name: pymysql
+    name: python3-pymysql
     state: present
-
-- name: List installed packages after
-  shell: apt list --installed
-  become: yes
 
 - include: create-wordpress-db.yaml
 - include: configure-replication-sourcedb.yaml
