@@ -1,1 +1,1 @@
-- import_playbook: configure-common.yaml
+- import_playbook: configure-dbtiera.yaml
