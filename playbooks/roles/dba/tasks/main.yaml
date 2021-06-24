@@ -7,12 +7,11 @@
 #  become: yes
 #
 
-- name: Install ansible python3 pymysql dependency
-  become: yes
-  pip3:
-    name: pymysql
-    state: present
-#   login: root
+#- name: Install ansible python3 pymysql dependency
+#  become: yes
+#  pip3:
+#    name: pymysql
+#    state: present
 
 - include: create-wordpress-db.yaml
 - include: configure-replication-sourcedb.yaml
