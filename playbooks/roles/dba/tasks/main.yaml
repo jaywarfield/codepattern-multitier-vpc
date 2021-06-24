@@ -7,9 +7,10 @@
 #  become: yes
 #
 - name: Install ansible python3 pymysql dependency
-  apt:
+  become: yes
+  pip:
     name: pymysql
-    state: latest
+    state: present
 
 - include: create-wordpress-db.yaml
 - include: configure-replication-sourcedb.yaml
