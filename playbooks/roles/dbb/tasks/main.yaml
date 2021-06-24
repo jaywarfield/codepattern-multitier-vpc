@@ -1,4 +1,6 @@
 ---
+# Install mySQL for wordpress
 # Configure mySQL replicadb for wordpress
 
+- include: create-wordpress-db.yaml
 - include: configure-replication-replicadb.yaml

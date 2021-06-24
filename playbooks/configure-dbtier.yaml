@@ -1,7 +1,0 @@
-- name: Configure Mysql Servers in dbtier
-  hosts: dbtier
-  remote_user: root
-  gather_facts: no
-
-  roles:
-    - db

@@ -1,4 +1,0 @@
----
-# Install mySQL for wordpress
-
-- include: create-wordpress-db.yaml
