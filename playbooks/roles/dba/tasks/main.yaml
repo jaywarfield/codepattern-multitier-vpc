@@ -3,8 +3,7 @@
 # Configure mySQL sourcedb for wordpress
 
 - name: Install ansible python3 pymysql dependency
-  shell: |
-      pip install pymysql
+  shell: pip install pymysql
   become: yes
 
 - include: create-wordpress-db.yaml
