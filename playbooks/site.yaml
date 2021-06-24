@@ -1,1 +1,1 @@
-- import_playbook: configure-dbtierb.yaml
+- import_playbook: configure-webapptier.yaml
