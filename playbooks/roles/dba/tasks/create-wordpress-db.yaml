@@ -1,7 +1,7 @@
 ---
 # Basic Setup of MySQL
 - name: Install ansible python3 pymysql dependency
-  python3-pip:
+  pip:
     name: pymysql
     state: present
 
