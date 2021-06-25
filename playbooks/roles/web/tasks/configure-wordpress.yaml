@@ -17,7 +17,7 @@
 
 - name: Copy wp-config.php to server
   copy:
-    src: ../files/wp-config.php
+    src: wp-config.php
     dest: /var/www/wordpress/wp-config.php
     owner: www-data
     group: www-data
