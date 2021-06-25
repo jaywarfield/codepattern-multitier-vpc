@@ -11,7 +11,7 @@
 - name: Install ansible python3 pymysql dependency
   become: yes
   apt:
-    name: pymysql
+    name: python3-pymysql
     state: present
 
 - include: create-wordpress-db.yaml
