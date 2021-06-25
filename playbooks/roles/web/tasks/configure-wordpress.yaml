@@ -17,7 +17,7 @@
 
 - name: Copy wp-config.php to server
   copy:
-    src: "{{ web_files }}/wp-config.php"
+    src: wp-config.php.txt
     dest: /var/www/wordpress/wp-config.php
     owner: www-data
     group: www-data
@@ -26,7 +26,7 @@
 
 - name: Copy wordpress.config to server
   copy:
-    src: wordpress.config
+    src: wordpress.config.txt
     dest: /var/www/wordpress/wordpress.config
     owner: root
     group: root
@@ -34,7 +34,7 @@
 
 - name: Copy db-config
   copy:
-    src: db-config.php
+    src: db-config.php.txt
     dest: /var/www/wordpress/db-config.php
     owner: www-data
     group: www-data
@@ -42,8 +42,8 @@
 
 - name: Copy db-php
   copy:
-    src: db.php
-    dest: /var/www/wordpress/wp-content/
+    src: db.php.txt
+    dest: /var/www/wordpress/wp-content/db.php
     owner: www-data
     group: www-data
     mode: 0755
