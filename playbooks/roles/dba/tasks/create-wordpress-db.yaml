@@ -1,9 +1,5 @@
 ---
 # Basic Setup of MySQL
-#- name: Install ansible python3 pymysql dependency
-#  pip:
-#    name: pymysql
-#    state: present
 
 - name: Change mysqld.cnf to listen on all interfaces
   shell: |

@@ -19,6 +19,7 @@ packages:
  - htop
  - git
  - python3-pip
+ - python3-mysqldb
  - supervisor
  - mysql-client
  - mysql-server
