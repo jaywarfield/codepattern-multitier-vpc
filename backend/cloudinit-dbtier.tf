@@ -18,8 +18,8 @@ packages:
  - ntp
  - htop
  - git
- - python3-pip
  - supervisor
+ - python3-pip
  - mysql-client
  - mysql-server
  - python3-pymysql
