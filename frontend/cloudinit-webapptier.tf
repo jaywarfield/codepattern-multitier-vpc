@@ -55,15 +55,15 @@ packages:
   - python3-pip
   - nginx-full
   - mysql-client
-  - php7.4
-  - php7.4-common
-  - php7.4-mbstring
-  - php7.4-gd
-  - php7.4-intl
-  - php7.4-xml
-  - php7.4-mysql
-  - php7.4-cli
-  - php7.4-cgi
+  - php7.2
+  - php7.2-common
+  - php7.2-mbstring
+  - php7.2-gd
+  - php7.2-intl
+  - php7.2-xml
+  - php7.2-mysql
+  - php7.2-cli
+  - php7.2-cgi
   - unit
   - unit-php
   - unit-dev
