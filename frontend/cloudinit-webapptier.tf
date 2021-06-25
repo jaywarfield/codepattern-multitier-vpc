@@ -51,7 +51,6 @@ packages:
   - git
   - unzip
   - supervisor
-  - apache2
   - python3-pip
   - nginx-full
   - mysql-client
@@ -70,7 +69,6 @@ packages:
   - unit-jsc-common
   - unit-jsc8
   - unit-php
-  - libssl-dev
 
 power_state:
  mode: reboot
