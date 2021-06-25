@@ -8,11 +8,11 @@
 #    name: python3-mysqldb
 #    state: present
 
-- name: Install ansible python3 pymysql dependency
-  become: yes
-  apt:
-    name: python3-pymysql
-    state: present
+#- name: Install ansible python3 pymysql dependency
+#  become: yes
+#  apt:
+#    name: python3-pymysql
+#    state: present
 
 - include: create-wordpress-db.yaml
 - include: configure-replication-replicadb.yaml
