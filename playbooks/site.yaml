@@ -1,1 +1,1 @@
-- import_playbook: configure-dbtier0.yaml
+- import_playbook: configure-common.yaml
