@@ -22,11 +22,10 @@
     owner: www-data
     group: www-data
     mode: 0755
-    remote_src: yes
 
 - name: Copy wordpress.config to server
   copy:
-    src: wordpress.config.txt
+    src: wordpress.conf
     dest: /var/www/wordpress/wordpress.config
     owner: root
     group: root
