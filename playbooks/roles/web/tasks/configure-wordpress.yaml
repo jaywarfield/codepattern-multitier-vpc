@@ -8,6 +8,7 @@
     group: www-data
     mode: 0775
     recurse: yes
+    become: yes
 
 - name: Download and untar Wordpress distro
   unarchive:
