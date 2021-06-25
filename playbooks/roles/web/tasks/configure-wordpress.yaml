@@ -17,11 +17,12 @@
 
 - name: Copy wp-config.php to server
   copy:
-    src: wp-config.php
+    src: {{ web_files }}/wp-config.php
     dest: /var/www/wordpress/wp-config.php
     owner: www-data
     group: www-data
     mode: 0755
+    remote_src: yes
 
 - name: Copy wordpress.config to server
   copy:
