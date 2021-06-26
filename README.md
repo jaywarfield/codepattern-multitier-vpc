@@ -111,40 +111,37 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 2. Generate an [SSH key](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys). The SSH key is required to access the provisioned VPC virtual server instances via the bastion host. After you have created your SSH key, make sure to upload this SSH key to your [account](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console) in the VPC region and resource group where you want to deploy this example.
 
-### Workspace
+### Workspace Steps
 
-1. On **Schematics** main page in IBM Cloud menu:
-
-- Select Workspaces
-- Select **Create workspace**   
-- Enter a name for your workspace   
-- Select **Create** to create your workspace
-
-2. On **Settings** page in your workspace:
-
-- Enter the URL of this example in the Github repository
-- Select the Terraform version: Terraform 0.14
-- Select **Save template information**
-- In the **Input variables** section, review the default input variables and provide alternatives if desired - the only mandatory parameter is the name given to the SSH key that you uploaded to your IBM Cloud account
+1. Go to **Schematics** main page
+2. Select Workspaces
+3. Select **Create workspace**   
+4. Enter a name for your workspace   
+5. Select **Create** to create your workspace
+6. Go to **Settings** page in your workspace
+7. Enter the URL of this example in the Github repository
+8. Select the Terraform version: Terraform 0.14
+9. Select **Save template information**
+10. In the **Input variables** section, review the default input variables and provide alternatives if desired - the only mandatory parameter is the name given to the SSH key that you uploaded to your IBM Cloud account
 - Select **Save changes**
 
-### Inventory
+### Inventory Steps
 
-- Go to **Schematics** main page
-- Select **Inventories**
-- Select **Create Inventory**
-- Enter a name for your inventory
-- Select **Define manually**
-- Enter the following:
+1. Go to **Schematics** main page
+2. Select **Inventories**
+3. Select **Create Inventory**
+4. Enter a name for your inventory
+5. Select **Define manually**
+6. Enter the following:
 
 | [webapptier] | [dbtier0] | [dbtier1] |
 | --- | --- | --- |
 | 172.21.0.4 | 172.21.1.4 | 172.21.9.4 |
 | 172.21.8.4 | | |
 
-- Select **Create inventory**:
+7. Select **Create inventory**:
 
-### Action
+### Action Steps
 
 1. Go to **Schematics** main page
 2. Select **Actions**
