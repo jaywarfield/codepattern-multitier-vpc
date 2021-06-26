@@ -114,12 +114,14 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 ### Workspace
 
 1. On **Schematics** main page in IBM Cloud menu:
+
 a. Select Workspaces
 b. Select Create a workspace   
 c. Enter a name for your workspace   
 d. Select Create to create your workspace
 
 2. On **Settings** page in your workspace:
+
 a. Enter the URL of this example in the Github repository
 b. Select the Terraform version: Terraform 0.14
 c. Select **Save template information**
