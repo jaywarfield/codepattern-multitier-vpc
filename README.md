@@ -11,7 +11,7 @@ A [multitier](https://en.wikipedia.org/wiki/Multitier_architecture) architecture
 
 High Level Architecture
 
-1. Infrastructure
+- Infrastructure
   - Public Cloud isolation using a VPC
   - RFC1918 private bring-your-own-IP addresses
   - Application and data layers deployed on isolated subnets accross different availability zones
@@ -21,7 +21,7 @@ High Level Architecture
   - SysDig & LogDNA for infrastructure and application monitoring
   - HTTP only for simplicity
 
-2. Application
+- Application
   - A horizontally scaleable web application deployed into a two different availability zones
   - Multiple database servers across two availability zones
   - A source/replica data replication strategy across availability zones
