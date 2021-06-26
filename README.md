@@ -94,13 +94,6 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 ## Documented Steps
 
-### Prerequisites
-
-The following software needs to be installed:
-1. Terraform 0.12 or greater
-2. [IBM Cloud Terraform Provider version 1.10.0](https://github.com/IBM-Cloud/terraform-provider-ibm) 
-2. Ansible 2.8
-
 The following must be configured prior to running Terraform / Ansible
 1. A Public SSH key as described in [SSH Keys](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys#ssh-keys).
 2. A resource group exists and is referenced in configuration as described in [Managing resource groups](https://cloud.ibm.com/docs/resources?topic=resources-rgs#rgs)
@@ -111,28 +104,3 @@ The following must be configured prior to running Terraform / Ansible
 1. [Deploy Infrastructure using Terraform](docs/terraform.md)
 2. [Establish site-to-site VPN](docs/vpn.md)
 3. [Configure Application Layer using Ansible](docs/ansible.md)
-
-
-## Additional Documentation Provided
-
-Useful links for Terraform and Ansible
-
-[Terraform Documentation](https://www.terraform.io/docs/index.html)
-
-[The IBM Cloud Provider for Terraform Documentation](https://ibm-cloud.github.io/tf-ibm-docs/v0.17.1/)
-
-[Ansible Documentation](https://docs.ansible.com/ansible/latest/index.html)
-
-
-Useful links for IBM Cloud VPC documentation.
-
-[Getting started with IBM Cloud Virtual Private Cloud](https://cloud.ibm.com/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)
-
-[Assigning role-based access to VPC resources](https://cloud.ibm.com/docs/vpc-on-classic?topic=vpc-on-classic-assigning-role-based-access-to-vpc-resources)
-
-[IBM Cloud CLI for VPC Reference](https://cloud.ibm.com/docs/vpc-on-classic?topic=vpc-infrastructure-cli-plugin-vpc-reference)
-
-[VPC API](https://cloud.ibm.com/apidocs/vpc-on-classic)
-
-[IBM Cloud Virtual Private Cloud API error messages](https://cloud.ibm.com/docs/vpc-on-classic?topic=vpc-on-classic-rias-error-messages)
-
