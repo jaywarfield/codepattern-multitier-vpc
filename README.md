@@ -96,22 +96,15 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 1. Make sure that you have the required [IAM permissions](https://cloud.ibm.com/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure and [Schematics permissions](https://cloud.ibm.com/docs/schematics?topic=schematics-access) to create the workspace and deploy resources.
 2. Generate an [SSH key](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys). The SSH key is required to access the provisioned VPC virtual server instances via the bastion host. After you have created your SSH key, make sure to upload this SSH key to your [account](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console) in the VPC region and resource group where you want to deploy this example.
-
-3.  Create the Schematics workspace:
-   1.  From the IBM Cloud menu
-    select [Schematics](https://cloud.ibm.com/schematics/overview).
-       - Click Create a workspace.   
-       - Enter a name for your workspace.   
-       - Click Create to create your workspace.
-    2.  On the workspace **Settings** page, enter the URL of this example in
-    the Schematics examples Github repository.
-     - Select the Terraform version: Terraform 0.12.
-     - Click **Save template information**.
-     - In the **Input variables** section, review the default input
-        variables and provide alternatives if desired. The only
-        mandatory parameter is the name given to the SSH key that you
-        uploaded to your IBM Cloud account.
-      - Click **Save changes**.
+3. Select [Schematics](https://cloud.ibm.com/schematics/overview) in the IBM Cloud menu:.
+- Click Create a workspace.   
+- Enter a name for your workspace.   
+- Click Create to create your workspace.
+4. On the workspace **Settings** page, enter the URL of this example in the Github repository.
+- Select the Terraform version: Terraform 0.12.
+- Click **Save template information**.
+- In the **Input variables** section, review the default input variables and provide alternatives if desired. The only mandatory parameter is the name given to the SSH key that you uploaded to your IBM Cloud account.
+- Click **Save changes**.
 
 4.  From the workspace **Settings** page, click **Generate plan** 
 5.  Click **View log** to review the log files of your Terraform
