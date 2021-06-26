@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Automate infrastructure deployment on [IBM Cloud](https://www.ibm.com/cloud) for [IBM VPC](https://www.ibm.com/cloud/vpc) utilizing:
+Automate infrastructure deployment and configuration on [IBM Cloud](https://www.ibm.com/cloud) for [IBM VPC](https://www.ibm.com/cloud/vpc) utilizing:
 - [Terraform](https://www.terraform.io/)
 - [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started)
 - [Schematics Actions (Ansible)](https://cloud.ibm.com/docs/schematics?topic=schematics-create-playbooks)
