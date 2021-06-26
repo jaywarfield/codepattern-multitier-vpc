@@ -90,7 +90,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | Cloud Internet Services (CIS) GLB | :white_check_mark: | GLB configured for illustrative purposes with DDOS proxy.  Alternatively a CNAME could have been used to publish the application URL. |
 | IBM Cloud Monitoring with Sysdig | :white_check_mark: | Public endpoint used |
 | IBM Cloud Log Analysis with LogDNA | :white_check_mark: | Public endpoint Used |
-| IBM Cloud Databases | | A VSI based instance of MySQL was chosen instead of a Database-as-a-Service capability to illustrate the ability to create logical network constructs and security, nd the ability to use Terraform and Ansible to configure the environment.|
+| IBM Cloud Databases | | A VSI based instance of MySQL was chosen instead of a Database-as-a-Service capability to illustrate the ability to create logical network constructs and security, nd the ability to use Terraform and Ansible to configure the environment. |
 
 ## Documented Steps
 
