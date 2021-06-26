@@ -20,7 +20,7 @@ High Level Architecture
   - Bastion and/or VPN-as-a-Service to establish remote secure connectivity between on-pream and the VPC
   - SysDig & LogDNA for infrastructure and application monitoring
   - HTTP only for simplicity
-  - Cloud-Init is used to install required packages and other setup tasks.
+  - Cloud-Init is used to install required packages and initial setup tasks
   - Ansible is used for post-configuration tasks.
 
 2. Application
