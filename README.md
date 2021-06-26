@@ -137,7 +137,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
   - Select **Define manually** and enter the following:
 
 | [webapptier] | [dbtier0] | [dbtier1] |
-| --- |
+| --- | --- | --- |
 | 172.21.0.4 | 172.21.1.4 | 172.21.9.4 |
 | 172.21.8.4 | | |
 
