@@ -126,6 +126,23 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 14. Select **View log** to review the log files of the plan
 15. Select **Apply plan** to provision plan
 16. Select **View log** to review the log files of the apply
+17. Note the **Outputs** at the end of the apply log file: 
+
+| Name | Value |
+| --- | --- |
+| app_name | www.your-domain.com |
+| bastionserver1 | bastionIP1 |
+| bastionserver2 | bastionIP2 |
+| ssh-bastionserver1 | ssh root@bastionIP1 |
+| ssh-bastionserver2 | ssh root@bastionIP2 |
+| replica_db | 172.21.9.4 |
+| ssh-replicadb | ssh -o ProxyJump=root@bastionIP2 root@172.21.9.4 |
+| source_db | 172.21.1.4 |
+| ssh-sourcedb | ssh -o ProxyJump=root@bastionIP1 root@172.21.1.4 |
+| webappserver1 | 172.21.0.4 |
+| ssh-webappserver1 | ssh -o ProxyJump=root@bastionIP1 root@172.21.0.4 |
+| webappserver2 | 172.21.8.4 |
+| ssh-webappserver2 | ssh -o ProxyJump=root@bastionIP2 root@172.21.8.4 |
 
 ### Inventory Steps
 
@@ -166,26 +183,3 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | replica_db | 172.21.9.4 | No |
 
 11. Select **Save**
-
-4.  From the workspace **Settings** page, click **Generate plan** 
-5.  Click **View log** to review the log files of your Terraform
-    execution plan.
-6.  Apply your Terraform template by clicking **Apply plan**.
-7.  Review the log file to ensure that no errors occurred during the
-    provisioning, modification, or deletion process.
-
-The output of the Schematics Apply Plan will list the public IP address
-of the bastion host and the frontend and backend app servers. These can
-be used for input to subsequent software provisioning templates using
-remote-exec or Redhat Ansible.
-
-The following must be configured prior to running Terraform / Ansible
-1. A Public SSH key as described in [SSH Keys](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys#ssh-keys).
-2. A resource group exists and is referenced in configuration as described in [Managing resource groups](https://cloud.ibm.com/docs/resources?topic=resources-rgs#rgs)
-3. User permissions and the required access as described in [Managing user permissions for VPC resources](https://cloud.ibm.com/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources)
-
-### Deploy VPC Infrastructure using Terraform & Ansible
-
-1. [Deploy Infrastructure using Terraform](docs/terraform.md)
-2. [Establish site-to-site VPN](docs/vpn.md)
-3. [Configure Application Layer using Ansible](docs/ansible.md)
