@@ -61,10 +61,10 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | Name | Type | Default | Override value | Sensitive |
 | --- | --- | --- | --- | --- |
 | ssh-public-key | string | |  your-key | Yes |
-| vpc-name | string | webappvpc |  your-webappvpc | Yes |
-| resource-group | string | webapprg |  your-webapprg | Yes |
-| domain | string | mydomain.com |  your-domain.com | Yes |
-| cis-instance-name | string | mydomain.com |  your-domain.com | Yes |
+| vpc-name | string | webappvpc |  your-webappvpc | No |
+| resource-group | string | webapprg |  your-webapprg | No|
+| domain | string | mydomain.com |  your-domain.com | No |
+| cis-instance-name | string | mydomain.com |  your-domain.com | No |
 
 ### Inventory
 
