@@ -57,7 +57,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | Security Groups | :white_check_mark: | |
 | Virtual Server Instance (VSI) | :white_check_mark: | |
 | Cloud-Init | :white_check_mark: | Package installation and configuration beyond base OS image |
-| Ansible | Post configuration tasks |
+| Ansible | :white_check_mark: | Post configuration tasks |
 | Secondary Storage |  | Not used in this scenario |
 | Multiple Network Interfaces in VSI | :white_check_mark: | |
 | Load Balancer as a Service | :white_check_mark: | Public Only |
