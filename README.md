@@ -32,7 +32,7 @@ Below is the IBM Virtual Private Cloud (VPC) architecture of the solution showin
 ![3tier Web App - Infrastructure](/docs/images/infrastructure-architecture.png)
 
 ### Application Architecture
-![3tuer Web App - Application](docs/images/application-data-flow.png)
+![3tier Web App - Application](docs/images/application-data-flow.png)
 
 #### *Not depicted in drawings*
 - VPNaaS or any VPN Connections
