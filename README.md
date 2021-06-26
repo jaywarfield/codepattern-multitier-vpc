@@ -122,7 +122,8 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | domain | string | mydomain.com |  your-domain.com | Yes |
 | cis-instance-name | string | mydomain.com |  your-domain.com | Yes |
 
-13. Select **Save changes**
+13. Select **Generate plan** to review plan
+14. Select **Apply plan** to provision plan
 
 ### Inventory Steps
 
