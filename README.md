@@ -91,15 +91,15 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | IBM Cloud Log Analysis with LogDNA | :white_check_mark: | Public endpoint Used |
 | IBM Cloud Databases | | A VSI based instance of MySQL was chosen instead of a Database-as-a-Service capability to illustrate the ability to create logical network constructs and security, nd the ability to use Terraform and Ansible to configure the environment. |
 
-## Instructions
+## Setup Instructions
 
-### Preliminary Steps
+### Preliminary
 
 1. Make sure that you have the required [IAM permissions](https://cloud.ibm.com/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure and [Schematics permissions](https://cloud.ibm.com/docs/schematics?topic=schematics-access) to create the workspace and deploy resources.
 
 2. Generate an [SSH key](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys). The SSH key is required to access the provisioned VPC virtual server instances via the bastion host. After you have created your SSH key, make sure to upload this SSH key to your [account](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console) in the VPC region and resource group where you want to deploy this example.
 
-### Workspace Steps
+### Workspace
 
 1. Go to **Schematics** main page
 2. Select Workspaces
@@ -122,29 +122,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | domain | string | mydomain.com |  your-domain.com | Yes |
 | cis-instance-name | string | mydomain.com |  your-domain.com | Yes |
 
-13. Select **Generate plan** to review plan
-14. Select **View log** to review the log files of the plan
-15. Select **Apply plan** to provision plan
-16. Select **View log** to review the log files of the apply
-17. Note the **Outputs** at the end of the apply log file: 
-
-| Name | Value |
-| --- | --- |
-| app_name | www<area>.your-domain.com |
-| bastionserver1 | bastionIP1 (public) |
-| bastionserver2 | bastionIP2 (public) |
-| ssh-bastionserver1 | ssh root@bastionIP1 |
-| ssh-bastionserver2 | ssh root@bastionIP2 |
-| replica_db | 172.21.9.4 |
-| ssh-replicadb | ssh -o ProxyJump=root@bastionIP2 root@172.21.9.4 |
-| source_db | 172.21.1.4 |
-| ssh-sourcedb | ssh -o ProxyJump=root@bastionIP1 root@172.21.1.4 |
-| webappserver1 | 172.21.0.4 |
-| ssh-webappserver1 | ssh -o ProxyJump=root@bastionIP1 root@172.21.0.4 |
-| webappserver2 | 172.21.8.4 |
-| ssh-webappserver2 | ssh -o ProxyJump=root@bastionIP2 root@172.21.8.4 |
-
-### Inventory Steps
+### Inventory
 
 1. Go to **Schematics** main page
 2. Select **Inventories**
@@ -160,7 +138,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 7. Select **Create inventory**
 
-### Action Steps
+### Action
 
 1. Go to **Schematics** main page
 2. Select **Actions**
@@ -183,3 +161,33 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | replica_db | 172.21.9.4 | No |
 
 11. Select **Save**
+
+## Usage Instructions
+
+### Workspace
+
+1. Go to **Schematics** main page
+2. Select Workspaces
+3. Select your workspace
+4. Select **Generate plan** to review plan
+5. Select **View log** to review the log files of the plan
+6. Select **Apply plan** to provision plan
+7. Select **View log** to review the log files of the apply
+8. Note the **Outputs** at the end of the apply log file: 
+
+| Name | Value |
+| --- | --- |
+| app_name | www<area>.your-domain.com |
+| bastionserver1 | bastionIP1 (public) |
+| bastionserver2 | bastionIP2 (public) |
+| ssh-bastionserver1 | ssh root@bastionIP1 |
+| ssh-bastionserver2 | ssh root@bastionIP2 |
+| replica_db | 172.21.9.4 |
+| ssh-replicadb | ssh -o ProxyJump=root@bastionIP2 root@172.21.9.4 |
+| source_db | 172.21.1.4 |
+| ssh-sourcedb | ssh -o ProxyJump=root@bastionIP1 root@172.21.1.4 |
+| webappserver1 | 172.21.0.4 |
+| ssh-webappserver1 | ssh -o ProxyJump=root@bastionIP1 root@172.21.0.4 |
+| webappserver2 | 172.21.8.4 |
+| ssh-webappserver2 | ssh -o ProxyJump=root@bastionIP2 root@172.21.8.4 |
+
