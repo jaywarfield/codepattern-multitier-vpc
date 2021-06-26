@@ -136,7 +136,6 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
   - Enter a name for your inventory
   - Select **Define manually** and enter the following:
 
-| --- |
 | [webapptier] |
 | 172.21.0.4 |
 | 172.21.8.4 |
