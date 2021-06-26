@@ -130,7 +130,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 ### Inventory
 
-1. On **Schematics** main page in IBM Cloud menu:
+- On **Schematics** main page in IBM Cloud menu:
   - Select **Inventories**
   - Select **Create Inventory**
   - Enter a name for your inventory
