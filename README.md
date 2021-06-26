@@ -19,14 +19,18 @@ High Level Architecture
   - Global DDOS and Global Load Balancing 
   - Bastion and/or VPN-as-a-Service to establish remote secure connectivity between on-pream and the VPC
   - SysDig & LogDNA for infrastructure and application monitoring
+  - HTTP only for simplicity
+  - Cloud-Init is used to install required packages and other setup tasks.
+  - Ansible is used for post-configuration tasks.
 
 2. Application
   - A horizontally scaleable web application deployed into a two different availability zones
   - Multiple database servers across two availability zones
   - A source/replica data replication strategy across availability zones
+  - MySQL database server implemented on infrastructure versus as-a-service to illustrate the ability to define logical tiers between subnets as well as to show the ability to automate deployment and configuration tasks
 
 ## VPC Architecture
-The IBM Virtual Private Cloud (VPC) architecture of the solution showing public isolation for both Application (through a Load Balancer) and data.
+The IBM VPC architecture of the solution showing public isolation for both Application (through a Load Balancer) and data.
 
 ### Infrastructure Architecture
 ![3tier Web App - Infrastructure](/docs/images/infrastructure-architecture.png)
@@ -38,16 +42,6 @@ The IBM Virtual Private Cloud (VPC) architecture of the solution showing public 
 - VPNaaS or any VPN Connections
 - Cloud Internet Services (GLB function or DNS)
 - Management Flows
-
-## Assumptions and Limitations
-
-- This documentation is meant to be used for illustrative and learning purposes primarily. 
-- This document expects the reader to have a basic level of understanding of network infrastructure, Terraform, Ansible and application deployment on a Linux environment.
-- The solution will implement HTTP only for simplicity.
-- A MySQL database server was implemented on Infrastructure versus as-a-service to illustrate both the ability to define logical tiers between subnets as well
-as to show the ability to automate deployment and configuration tasks.
-- Ansible is used for all post configuration tasks.
-
 
 ## VPC Functional Coverage
 | Function | Demonstrated | Notes |
