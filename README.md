@@ -123,7 +123,9 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | cis-instance-name | string | mydomain.com |  your-domain.com | Yes |
 
 13. Select **Generate plan** to review plan
-14. Select **Apply plan** to provision plan
+14. Select **View log** to review the log files of the plan
+15. Select **Apply plan** to provision plan
+16. Select **View log** to review the log files of the apply
 
 ### Inventory Steps
 
@@ -139,7 +141,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | 172.21.0.4 | 172.21.1.4 | 172.21.9.4 |
 | 172.21.8.4 | | |
 
-7. Select **Create inventory**:
+7. Select **Create inventory**
 
 ### Action Steps
 
