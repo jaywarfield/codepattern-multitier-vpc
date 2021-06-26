@@ -35,62 +35,6 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 ### Application Architecture
 ![3tier Web App - Application](docs/images/application-data-flow.png)
 
-#### *Not depicted in drawings*
-- VPNaaS or any VPN Connections
-- Cloud Internet Services (GLB function or DNS)
-- Management Flows
-
-## VPC Functional Coverage
-| Function | Demonstrated | Notes |
-| -------- | ------ | ----- |
-| VPC | :white_check_mark: | |
-| Terraform | :white_check_mark: | |
-| Terraform Cloud-Init | :white_check_mark: | Package installation and configuration beyond base OS image |
-| Schematics Workspaces | :white_check_mark: | |
-| Schematics Actions (Ansible) | :white_check_mark: | |
-| Schematics Inventories| :white_check_mark: | |
-| Resource Groups | :white_check_mark: | |
-| Access Groups | :white_check_mark: | Inherited, but assumed to already be created |
-| Subnets | :white_check_mark: | |
-| Private (RFC1918) IP (BYOIP) | :white_check_mark: | |
-| ACLs | :white_check_mark: | |
-| Security Groups | :white_check_mark: | |
-| Virtual Server Instance (VSI) | :white_check_mark: | |
-| Secondary Storage |  | Not used in this scenario |
-| Multiple Network Interfaces in VSI | :white_check_mark: | |
-| Load Balancer as a Service | :white_check_mark: | Public Only |
-| Floating IPv4 |  | Not required for workload |
-| Public Gateway | :white_check_mark: |  |
-| VPNaaS | :white_check_mark: | |
-| Cloud Internet Services (CIS) | :white_check_mark: | GLB configured for illustrative purposes with DDOS proxy |
-| IBM Cloud Monitoring with Sysdig | :white_check_mark: | Public endpoint used |
-| IBM Cloud Log Analysis with LogDNA | :white_check_mark: | Public endpoint Used
-
-### System Requirements
-
-#### Operating system
-
-| Tier  | Operating system |
-| ------------- | ------------- |
-| Web Server & Application | Ubuntu 20.04  |
-| Data  | Ubuntu 20.04  |
-
-#### Hardware
-
-| Tier | Type | Profile |
-| ------------- | ------------- | ------- |
-| Web Server and Application  |  VSI | cx2-2x4 |
-| Data| VSI  | bx2-4x16 |
-
-#### Runtime Services
-
-| Service Name | Demonstrated | Notes
-| ------------ | ------------ | -----
-| Cloud Internet Services (CIS) GLB | :white_check_mark: | GLB configured for illustrative purposes with DDOS proxy.  Alternatively a CNAME could have been used to publish the application URL. |
-| IBM Cloud Monitoring with Sysdig | :white_check_mark: | Public endpoint used |
-| IBM Cloud Log Analysis with LogDNA | :white_check_mark: | Public endpoint Used |
-| IBM Cloud Databases | | A VSI based instance of MySQL was chosen instead of a Database-as-a-Service capability to illustrate the ability to create logical network constructs and security, nd the ability to use Terraform and Ansible to configure the environment. |
-
 ## Setup Instructions
 
 ### Preliminary
@@ -170,10 +114,10 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 2. Select Workspaces
 3. Select your workspace
 4. Select **Generate plan** to review plan
-5. Select **View log** to review the log files of the plan
+5. Select **View log** to review the plan execution log
 6. Select **Apply plan** to provision plan
-7. Select **View log** to review the log files of the apply
-8. Note the **Outputs** at the end of the apply log file: 
+7. Select **View log** to review the apply execution log
+8. Note the **Outputs** at the end of apply execution log:
 
 | Name | Value |
 | --- | --- |
@@ -191,3 +135,16 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | webappserver2 | 172.21.8.4 |
 | ssh-webappserver2 | ssh -o ProxyJump=root@bastionIP2 root@172.21.8.4 |
 
+9. Optionally review /var/log/cloud-init-output.log on each server
+
+### Action
+
+1. Go to **Schematics** main page
+2. Select **Actions**
+3. Select your action
+4. Select **Settings**
+5. Select **Edit inventory**
+6. Update **Bastion host IP** with IP from Terraform output
+7. Select **Save**
+8. Select **Run action**
+9. Select **View log** to review the run action log
