@@ -156,6 +156,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
   - Enter the URL of the Github repository
   - Select **Retrieve playbooks**
 - Go to "Define your variables" and select **Add input value** to add each variable:
+
 | Key | Value | Sensitive |
 | ---------- | -------- | ----------- |
 | dbpassword | securepassw0rd | | Yes |
@@ -164,6 +165,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | app_name | (website) | | No |
 | source_db | 172.21.1.4 | | No |
 | replica_db | 172.21.9.4 | | No |
+
 - Select **Save**
 
 4.  From the workspace **Settings** page, click **Generate plan** 
