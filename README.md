@@ -155,14 +155,15 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 - Go to **Settings** page:
   - Enter the URL of the Github repository
   - Select **Retrieve playbooks**
-- Go to "Define your variables":
-  - Select **Add input value** to add each variable
-  - Enter Key=dbpassword, Value=securepassw0rd, select Sensitive
-  - Enter Key=logdna_key, Value=143c30a06ac6dfae03b3a84259bf1b9e, select Sensitive
-  - Enter Key=sysdig_key, Value=55e7f496-af78-4e0d-89f7-fa040e259ebd, select Sensitive
-  - Enter Key=app_name, Value=(website)
-  - Enter Key=source_db, Value=172.21.1.4
-  - Enter Key=replica_db, Value=172.21.9.4
+- Go to "Define your variables" and select **Add input value** to add each variable:
+| Key | Value | Sensitive |
+| ---------- | -------- | ----------- |
+| dbpassword | securepassw0rd | | Yes |
+| logdna_key | 143c30a06ac6dfae03b3a84259bf1b9e | | Yes |
+| sysdig_key | 55e7f496-af78-4e0d-89f7-fa040e259ebd | | Yes |
+| app_name | (website) | | No |
+| source_db | 172.21.1.4 | | No |
+| replica_db | 172.21.9.4 | | No |
 - Select **Save**
 
 4.  From the workspace **Settings** page, click **Generate plan** 
