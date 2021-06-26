@@ -92,22 +92,79 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | IBM Cloud Log Analysis with LogDNA | :white_check_mark: | Public endpoint Used |
 | IBM Cloud Databases | | A VSI based instance of MySQL was chosen instead of a Database-as-a-Service capability to illustrate the ability to create logical network constructs and security, nd the ability to use Terraform and Ansible to configure the environment. |
 
+## Action Variables
+
+| Key | Value | Sensitive |
+| ---------- | -------- | ----------- |
+| dbpassword | securepassw0rd | | Yes |
+| logdna_key | 143c30a06ac6dfae03b3a84259bf1b9e | | Yes |
+| sysdig_key | 55e7f496-af78-4e0d-89f7-fa040e259ebd | | Yes |
+| app_name | (website) | | No |
+| source_db | 172.21.1.4 | | No |
+| replica_db | 172.21.9.4 | | No |
+
 ## Instructions
+
+### Preliminary
 
 1. Make sure that you have the required [IAM permissions](https://cloud.ibm.com/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure and [Schematics permissions](https://cloud.ibm.com/docs/schematics?topic=schematics-access) to create the workspace and deploy resources.
 
 2. Generate an [SSH key](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys). The SSH key is required to access the provisioned VPC virtual server instances via the bastion host. After you have created your SSH key, make sure to upload this SSH key to your [account](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console) in the VPC region and resource group where you want to deploy this example.
 
-3. Select [Schematics](https://cloud.ibm.com/schematics/overview) in the IBM Cloud menu:
-- Click Create a workspace.   
-- Enter a name for your workspace.   
-- Click Create to create your workspace.
+### Workspace
 
-4. On the workspace **Settings** page, enter the URL of this example in the Github repository.
-- Select the Terraform version: Terraform 0.12.
-- Click **Save template information**.
-- In the **Input variables** section, review the default input variables and provide alternatives if desired. The only mandatory parameter is the name given to the SSH key that you uploaded to your IBM Cloud account.
-- Click **Save changes**.
+1. On **Schematics** main page in IBM Cloud menu:
+a. Select Workspaces
+b. Select Create a workspace   
+c. Enter a name for your workspace   
+d. Select Create to create your workspace
+
+2. On **Settings** page in your workspace:
+a. Enter the URL of this example in the Github repository
+b. Select the Terraform version: Terraform 0.14
+c. Select **Save template information**
+d. In the **Input variables** section, review the default input variables and provide alternatives if desired - the only mandatory parameter is the name given to the SSH key that you uploaded to your IBM Cloud account
+- Select **Save changes**
+
+### Inventory
+
+1. On **Schematics** main page in IBM Cloud menu:
+a. Select **Inventories**
+b. Select **Create Inventory**
+c. Enter a name for your inventory
+d. Select **Define manually**
+e. Enter the following:
+[webapptier]
+172.21.0.4
+172.21.8.4
+[dbtier0]
+172.21.1.4
+[dbtier1]
+172.21.9.4
+f. Select **Create inventory**
+
+### Action
+
+1. On **Schematics** main page in IBM Cloud menu:
+a. Select Actions
+b. Select Create action   
+c. Enter a name for your action   
+d. Select Create to create your action
+
+2. On **Settings** page in your action:
+a. Enter the URL of this example in the Github repository
+b. Select **Retrieve playbooks**
+c. Select **Save**
+
+- Select **Save changes**
+| Key | Value | Sensitive |
+| ---------- | -------- | ----------- |
+| dbpassword | securepassw0rd | | Yes |
+| logdna_key | 143c30a06ac6dfae03b3a84259bf1b9e | | Yes |
+| sysdig_key | 55e7f496-af78-4e0d-89f7-fa040e259ebd | | Yes |
+| app_name | (website) | | No |
+| source_db | 172.21.1.4 | | No |
+| replica_db | 172.21.9.4 | | No |
 
 4.  From the workspace **Settings** page, click **Generate plan** 
 5.  Click **View log** to review the log files of your Terraform
