@@ -146,16 +146,16 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 ### Action
 
-- Go to **Schematics** main page
-- Select **Actions**
-- Select **Create action**   
-- Enter a name for your action   
-- Select **Create** to create your action
-- Go to **Settings** page
-- Enter URL of the Github repository
-- Select **Retrieve playbooks**
-- Go to **Define your variables**
-- Select **Add input value** for each variable:
+1. Go to **Schematics** main page
+2. Select **Actions**
+3. Select **Create action**   
+4. Enter a name for your action   
+5. Select **Create** to create your action
+6. Go to **Settings** page
+7. Enter URL of the Github repository
+8. Select **Retrieve playbooks**
+9. Go to **Define your variables**
+10. Select **Add input value** for each variable:
 
 | Key | Value | Sensitive |
 | --- | --- | --- |
@@ -166,7 +166,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | source_db | 172.21.1.4 | No |
 | replica_db | 172.21.9.4 | No |
 
-- Select **Save**
+11. Select **Save**
 
 4.  From the workspace **Settings** page, click **Generate plan** 
 5.  Click **View log** to review the log files of your Terraform
