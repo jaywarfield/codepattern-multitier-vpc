@@ -116,9 +116,9 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 1. On **Schematics** main page in IBM Cloud menu:
 
 - Select Workspaces
-- Select Create a workspace   
+- Select **Create workspace**   
 - Enter a name for your workspace   
-- Select Create to create your workspace
+- Select **Create** to create your workspace
 
 2. On **Settings** page in your workspace:
 
