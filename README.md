@@ -130,29 +130,32 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 ### Inventory
 
-- Go to **Schematics** main page:
-  - Select **Inventories**
-  - Select **Create Inventory**
-  - Enter a name for your inventory
-  - Select **Define manually**
-  - Enter the following then select **Create inventory**:
+- Go to **Schematics** main page
+- Select **Inventories**
+- Select **Create Inventory**
+- Enter a name for your inventory
+- Select **Define manually**
+- Enter the following:
 
 | [webapptier] | [dbtier0] | [dbtier1] |
 | --- | --- | --- |
 | 172.21.0.4 | 172.21.1.4 | 172.21.9.4 |
 | 172.21.8.4 | | |
 
+- Select **Create inventory**:
+
 ### Action
 
-- Go to **Schematics** main page:
-  - Select **Actions**
-  - Select **Create action**   
-  - Enter a name for your action   
-  - Select **Create** to create your action
-- Go to **Settings** page:
-  - Enter the URL of the Github repository
-  - Select **Retrieve playbooks**
-- Go to "Define your variables" and select **Add input value** to add each variable:
+- Go to **Schematics** main page
+- Select **Actions**
+- Select **Create action**   
+- Enter a name for your action   
+- Select **Create** to create your action
+- Go to **Settings** page
+- Enter URL of the Github repository
+- Select **Retrieve playbooks**
+- Go to "Define your variables"
+- Select **Add input value** for each variable:
 
 | Key | Value | Sensitive |
 | --- | --- | --- |
