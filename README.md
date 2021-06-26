@@ -139,11 +139,17 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 - Enter the following:
 
 [webapptier]
+
 172.21.0.4
+
 172.21.8.4
+
 [dbtier0]
+
 172.21.1.4
+
 [dbtier1]
+
 172.21.9.4
 
 - Select **Create inventory**
