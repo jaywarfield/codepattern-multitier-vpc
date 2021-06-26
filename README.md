@@ -1,4 +1,4 @@
-# Automate Multitier Web App in IBM Virtual Private Cloud
+# Automate deployment of Multitier Web App in IBM VPC
 
 ## Purpose
 
