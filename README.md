@@ -20,8 +20,6 @@ High Level Architecture
   - Bastion and/or VPN-as-a-Service to establish remote secure connectivity between on-pream and the VPC
   - SysDig & LogDNA for infrastructure and application monitoring
   - HTTP only for simplicity
-  - Cloud-Init is used to install required packages and initial setup tasks
-  - Ansible is used for post-configuration tasks.
 
 2. Application
   - A horizontally scaleable web application deployed into a two different availability zones
@@ -58,7 +56,8 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | ACLs | :white_check_mark: | |
 | Security Groups | :white_check_mark: | |
 | Virtual Server Instance (VSI) | :white_check_mark: | |
-| Cloud-init | :white_check_mark: | Package installation and configuration beyond base OS image. |
+| Cloud-Init | :white_check_mark: | Package installation and configuration beyond base OS image |
+| Ansible | Post configuration tasks |
 | Secondary Storage |  | Not used in this scenario |
 | Multiple Network Interfaces in VSI | :white_check_mark: | |
 | Load Balancer as a Service | :white_check_mark: | Public Only |
