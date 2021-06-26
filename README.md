@@ -45,9 +45,10 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | -------- | ------ | ----- |
 | VPC | :white_check_mark: | |
 | Terraform | :white_check_mark: | |
-| Ansible Workspaces | :white_check_mark: | |
-| Ansible Actions | :white_check_mark: | |
-| Ansible Inventories| :white_check_mark: | |
+| Terraform Cloud-Init | :white_check_mark: | Package installation and configuration beyond base OS image |
+| Schematics Workspaces | :white_check_mark: | |
+| Schematics Actions (Ansible) | :white_check_mark: | |
+| Schematics Inventories| :white_check_mark: | |
 | Resource Groups | :white_check_mark: | |
 | Access Groups | :white_check_mark: | Inherited, but assumed to already be created |
 | Subnets | :white_check_mark: | |
@@ -55,8 +56,6 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | ACLs | :white_check_mark: | |
 | Security Groups | :white_check_mark: | |
 | Virtual Server Instance (VSI) | :white_check_mark: | |
-| Cloud-Init | :white_check_mark: | Package installation and configuration beyond base OS image |
-| Ansible | :white_check_mark: | Post configuration tasks |
 | Secondary Storage |  | Not used in this scenario |
 | Multiple Network Interfaces in VSI | :white_check_mark: | |
 | Load Balancer as a Service | :white_check_mark: | Public Only |
