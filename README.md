@@ -92,20 +92,9 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | IBM Cloud Log Analysis with LogDNA | :white_check_mark: | Public endpoint Used |
 | IBM Cloud Databases | | A VSI based instance of MySQL was chosen instead of a Database-as-a-Service capability to illustrate the ability to create logical network constructs and security, nd the ability to use Terraform and Ansible to configure the environment. |
 
-## Action Variables
-
-| Key | Value | Sensitive |
-| ---------- | -------- | ----------- |
-| dbpassword | securepassw0rd | | Yes |
-| logdna_key | 143c30a06ac6dfae03b3a84259bf1b9e | | Yes |
-| sysdig_key | 55e7f496-af78-4e0d-89f7-fa040e259ebd | | Yes |
-| app_name | (website) | | No |
-| source_db | 172.21.1.4 | | No |
-| replica_db | 172.21.9.4 | | No |
-
 ## Instructions
 
-### Preliminary
+### Preliminary Steps
 
 1. Make sure that you have the required [IAM permissions](https://cloud.ibm.com/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure and [Schematics permissions](https://cloud.ibm.com/docs/schematics?topic=schematics-access) to create the workspace and deploy resources.
 
@@ -123,7 +112,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 8. Select the Terraform version: Terraform 0.14
 9. Select **Save template information**
 10. In the **Input variables** section, review the default input variables and provide alternatives if desired - the only mandatory parameter is the name given to the SSH key that you uploaded to your IBM Cloud account
-- Select **Save changes**
+11. Select **Save changes**
 
 ### Inventory Steps
 
