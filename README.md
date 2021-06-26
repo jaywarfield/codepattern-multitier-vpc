@@ -25,7 +25,6 @@ High Level Architecture
   - A horizontally scaleable web application deployed into a two different availability zones
   - Multiple database servers across two availability zones
   - A source/replica data replication strategy across availability zones
-  - MySQL database server implemented on infrastructure versus as-a-service to illustrate the ability to define logical tiers between subnets as well as to show the ability to automate deployment and configuration tasks
 
 ## VPC Architecture
 The IBM VPC architecture of the solution showing public isolation for both Application (through a Load Balancer) and data.
@@ -61,7 +60,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | Secondary Storage |  | Not used in this scenario |
 | Multiple Network Interfaces in VSI | :white_check_mark: | |
 | Load Balancer as a Service | :white_check_mark: | Public Only |
-| Floating IPv4 |  | Not required for workload. |
+| Floating IPv4 |  | Not required for workload |
 | Public Gateway | :white_check_mark: |  |
 | VPNaaS | :white_check_mark: | |
 | Cloud Internet Services (CIS) | :white_check_mark: | GLB configured for illustrative purposes with DDOS proxy |
@@ -74,8 +73,8 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 | Tier  | Operating system |
 | ------------- | ------------- |
-| Web Server & Application | Ubuntu 18.04  |
-| Data  | Ubuntu 18.04  |
+| Web Server & Application | Ubuntu 20.04  |
+| Data  | Ubuntu 20.04  |
 
 #### Hardware
 
@@ -91,7 +90,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | Cloud Internet Services (CIS) GLB | :white_check_mark: | GLB configured for illustrative purposes with DDOS proxy.  Alternatively a CNAME could have been used to publish the application URL. |
 | IBM Cloud Monitoring with Sysdig | :white_check_mark: | Public endpoint used |
 | IBM Cloud Log Analysis with LogDNA | :white_check_mark: | Public endpoint Used |
-| IBM Cloud Databases | | A VSI based instance of MySQL was chosen instead of a Database-as-a-Service capability to illustrate both the ability to create logial network constructs and security and the ability to use Terraform and Ansible to configure the environment.|
+| IBM Cloud Databases | | A VSI based instance of MySQL was chosen instead of a Database-as-a-Service capability to illustrate the ability to create logical network constructs and security, nd the ability to use Terraform and Ansible to configure the environment.|
 
 ## Documented Steps
 
