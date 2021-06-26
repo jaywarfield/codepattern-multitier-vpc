@@ -74,7 +74,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 4. Enter a name for your inventory
 5. Select **Define manual** and **Create inventory** with the following:
 
-| |
+| Inventory |
 | --- |
 | [webapptier] |
 | 172.21.0.4 |
