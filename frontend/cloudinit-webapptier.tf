@@ -5,6 +5,12 @@ data "template_cloudinit_config" "cloudinit-webapptier" {
   part {
     content = <<EOF
 #cloud-config
+bootcmd:
+  # Fix for Ubuntu 20  error with nginx unit depends on libssl1.0.0 (>= 1.0.0) but it is not installable
+  # bootcmd executes before packages whereas runcmd executes after packages
+  - apt update
+  - apt-cache policy libssl1.0-dev
+  - apt-get install libssl1.0-dev
 apt:
   primary:
     - arches: [default]
@@ -41,11 +47,6 @@ apt:
           Va3l3WuB+rgKjsQ=
           =EWWI
           -----END PGP PUBLIC KEY BLOCK-----
-runcmd:
-  # Fix for Ubuntu 20  error with nginx unit depends on libssl1.0.0 (>= 1.0.0) but it is not installable
-  - sudo apt update
-  - sudo apt-cache policy libssl1.0-dev
-  - sudo apt-get install libssl1.0-dev
 package_update: true
 package_upgrade: true
 packages:
