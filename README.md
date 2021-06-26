@@ -27,7 +27,7 @@ High Level Architecture
   - A source/replica data replication strategy across availability zones
 
 ## VPC Architecture
-The IBM VPC architecture of the solution showing public isolation for both Application (through a Load Balancer) and data.
+The IBM VPC architecture of the solution showing public isolation for both Application (through a Load Balancer) and Data.
 
 ### Infrastructure Architecture
 ![3tier Web App - Infrastructure](/docs/images/infrastructure-architecture.png)
@@ -108,10 +108,21 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 5. Select **Create** to create your workspace
 6. Go to **Settings** page in your workspace
 7. Enter the URL of this example in the Github repository
-8. Select the Terraform version: Terraform 0.14
+8. Select the Terraform version: terraform_v0.14
 9. Select **Save template information**
-10. In the **Input variables** section, review the default input variables and provide alternatives if desired - the only mandatory parameter is the name given to the SSH key that you uploaded to your IBM Cloud account
-11. Select **Save changes**
+10. Go to **Variables**
+11. Review the **Defaults** for each variable
+12. Select **Edit** and uncheck "Use default" to customize values, in particular:
+
+| Name | Type | Default | Override value | Sensitive |
+| --- | --- | --- | --- | --- |
+| ssh-public-key | string | |  your-key | Yes |
+| vpc-name | string | webappvpc |  your-webappvpc | Yes |
+| resource-group | string | webapprg |  your-webapprg | Yes |
+| domain | string | mydomain.com |  your-domain.com | Yes |
+| cis-instance-name | string | mydomain.com |  your-domain.com | Yes |
+
+13. Select **Save changes**
 
 ### Inventory Steps
 
