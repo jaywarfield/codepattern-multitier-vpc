@@ -117,6 +117,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 5. Select **View log** to review the plan execution log
 6. Select **Apply plan** to provision plan
 7. Select **View log** to review the apply execution log
+9. Optionally review /var/log/cloud-init-output.log on each server
 8. Note the **Outputs** at the end of apply execution log:
 
 | Name | Value |
@@ -134,8 +135,6 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | ssh-webappserver1 | ssh -o ProxyJump=root@bastionIP1 root@172.21.0.4 |
 | webappserver2 | 172.21.8.4 |
 | ssh-webappserver2 | ssh -o ProxyJump=root@bastionIP2 root@172.21.8.4 |
-
-9. Optionally review /var/log/cloud-init-output.log on each server
 
 ### Action
 
