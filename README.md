@@ -131,8 +131,8 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | Name | Value |
 | --- | --- |
 | app_name | www.your-domain.com |
-| bastionserver1 | bastionIP1 |
-| bastionserver2 | bastionIP2 |
+| bastionserver1 | bastionIP1 (public) |
+| bastionserver2 | bastionIP2 (public) |
 | ssh-bastionserver1 | ssh root@bastionIP1 |
 | ssh-bastionserver2 | ssh root@bastionIP2 |
 | replica_db | 172.21.9.4 |
