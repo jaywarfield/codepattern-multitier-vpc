@@ -26,7 +26,7 @@ High Level Architecture
   - A source/replica data replication strategy across availability zones
 
 ## VPC Architecture
-Below is the IBM Virtual Private Cloud (VPC) architecture of the solution showing public isolation for both Application (through a Load Balancer) and data.
+The IBM Virtual Private Cloud (VPC) architecture of the solution showing public isolation for both Application (through a Load Balancer) and data.
 
 ### Infrastructure Architecture
 ![3tier Web App - Infrastructure](/docs/images/infrastructure-architecture.png)
