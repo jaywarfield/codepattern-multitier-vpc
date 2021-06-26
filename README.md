@@ -17,7 +17,7 @@ High Level Architecture
   - Application and data layers deployed on isolated subnets accross different availability zones
   - Network isolation defined logically using Security Groups and ACLs
   - Global DDOS and Global Load Balancing 
-  - VPN-as-a-Service to establish remote secure connectivity between on-pream and the VPC
+  - Bastion and/or VPN-as-a-Service to establish remote secure connectivity between on-pream and the VPC
   - SysDig & LogDNA for infrastructure and application monitoring
 
 2. Application
