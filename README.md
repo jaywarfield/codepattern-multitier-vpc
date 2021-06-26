@@ -54,7 +54,9 @@ as to show the ability to automate deployment and configuration tasks.
 | -------- | ------ | ----- |
 | VPC | :white_check_mark: | |
 | Terraform | :white_check_mark: | |
-| Ansible | :white_check_mark: | |
+| Ansible Workspace | :white_check_mark: | |
+| Ansible Action | :white_check_mark: | |
+| Ansible Inventory| :white_check_mark: | |
 | Resource Groups | :white_check_mark: | Assigned, but assumed to be created already. |
 | Access Groups | :white_check_mark: | Inherited, but assumed to already be created |
 | Subnets | :white_check_mark: | |
