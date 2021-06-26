@@ -6,11 +6,18 @@ data "template_cloudinit_config" "cloudinit-webapptier" {
     content = <<EOF
 #cloud-config
 bootcmd:
-  # Fix for Ubuntu 20  error with nginx unit depends on libssl1.0.0 (>= 1.0.0) but it is not installable
-  # bootcmd executes before packages whereas runcmd executes after packages
+  # Install libssl version required by nginx unit missing in Ubuntu 20.04.
+  # Note: Fix for error libssl1.0.0 (>= 1.0.0) is not installable.
+  # Note: bootcmd executes before packages whereas runcmd executes after.
+  - echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list.d/bionic.list
   - apt update
   - apt-cache policy libssl1.0-dev
   - apt-get install libssl1.0-dev
+  # Create Wordpress directory
+  - mkdir /var/www
+  - chown www-data:www-data /var/www
+  - chmod 0775 /var/www
+
 apt:
   primary:
     - arches: [default]
@@ -47,6 +54,7 @@ apt:
           Va3l3WuB+rgKjsQ=
           =EWWI
           -----END PGP PUBLIC KEY BLOCK-----
+
 package_update: true
 package_upgrade: true
 packages:
