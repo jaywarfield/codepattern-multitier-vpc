@@ -51,7 +51,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | Ansible Workspaces | :white_check_mark: | |
 | Ansible Actions | :white_check_mark: | |
 | Ansible Inventories| :white_check_mark: | |
-| Resource Groups | :white_check_mark: | Assigned, but assumed to be created already. |
+| Resource Groups | :white_check_mark: | |
 | Access Groups | :white_check_mark: | Inherited, but assumed to already be created |
 | Subnets | :white_check_mark: | |
 | Private (RFC1918) IP (BYOIP) | :white_check_mark: | |
