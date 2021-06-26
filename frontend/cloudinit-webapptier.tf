@@ -42,7 +42,7 @@ apt:
           =EWWI
           -----END PGP PUBLIC KEY BLOCK-----
 runcmd:
-  # Fix nginx unit error in Ubuntu 20.04 : libssl1.0.0 (>= 1.0.0) but it is not installable
+  # Fix for Ubuntu 20  error with nginx unit depends on libssl1.0.0 (>= 1.0.0) but it is not installable
   - sudo apt update
   - sudo apt-cache policy libssl1.0-dev
   - sudo apt-get install libssl1.0-dev
