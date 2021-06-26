@@ -115,27 +115,29 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 1. On **Schematics** main page in IBM Cloud menu:
 
-a. Select Workspaces
-b. Select Create a workspace   
-c. Enter a name for your workspace   
-d. Select Create to create your workspace
+- Select Workspaces
+- Select Create a workspace   
+- Enter a name for your workspace   
+- Select Create to create your workspace
 
 2. On **Settings** page in your workspace:
 
-a. Enter the URL of this example in the Github repository
-b. Select the Terraform version: Terraform 0.14
-c. Select **Save template information**
-d. In the **Input variables** section, review the default input variables and provide alternatives if desired - the only mandatory parameter is the name given to the SSH key that you uploaded to your IBM Cloud account
+- Enter the URL of this example in the Github repository
+- Select the Terraform version: Terraform 0.14
+- Select **Save template information**
+- In the **Input variables** section, review the default input variables and provide alternatives if desired - the only mandatory parameter is the name given to the SSH key that you uploaded to your IBM Cloud account
 - Select **Save changes**
 
 ### Inventory
 
 1. On **Schematics** main page in IBM Cloud menu:
-a. Select **Inventories**
-b. Select **Create Inventory**
-c. Enter a name for your inventory
-d. Select **Define manually**
-e. Enter the following:
+
+- Select **Inventories**
+- Select **Create Inventory**
+- Enter a name for your inventory
+- Select **Define manually**
+- Enter the following:
+
 [webapptier]
 172.21.0.4
 172.21.8.4
@@ -143,7 +145,8 @@ e. Enter the following:
 172.21.1.4
 [dbtier1]
 172.21.9.4
-f. Select **Create inventory**
+
+- Select **Create inventory**
 
 ### Action
 
