@@ -154,7 +154,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 - Go to **Settings** page
 - Enter URL of the Github repository
 - Select **Retrieve playbooks**
-- Go to "Define your variables"
+- Go to **Define your variables**
 - Select **Add input value** for each variable:
 
 | Key | Value | Sensitive |
