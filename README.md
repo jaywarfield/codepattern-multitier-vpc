@@ -93,7 +93,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 7. Enter URL of the Github repository
 8. Select **Retrieve playbooks**
 9. Go to **Define your variables**
-10. Select **Add input value** for each variable:
+10. Select **Add input value** for these variables and select **Save**:
 
 | Key | Value | Sensitive |
 | --- | --- | --- |
@@ -103,8 +103,6 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | app_name | (website) | No |
 | source_db | 172.21.1.4 | No |
 | replica_db | 172.21.9.4 | No |
-
-11. Select **Save**
 
 ## Usage Instructions
 
