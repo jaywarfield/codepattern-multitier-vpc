@@ -130,7 +130,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 ### Inventory
 
-- On **Schematics** main page in IBM Cloud menu:
+- Go to **Schematics** main page:
   - Select **Inventories**
   - Select **Create Inventory**
   - Enter a name for your inventory
@@ -147,26 +147,23 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 ### Action
 
-1. On **Schematics** main page in IBM Cloud menu:
-a. Select Actions
-b. Select Create action   
-c. Enter a name for your action   
-d. Select Create to create your action
-
-2. On **Settings** page in your action:
-a. Enter the URL of this example in the Github repository
-b. Select **Retrieve playbooks**
-c. Select **Save**
-
-- Select **Save changes**
-| Key | Value | Sensitive |
-| ---------- | -------- | ----------- |
-| dbpassword | securepassw0rd | | Yes |
-| logdna_key | 143c30a06ac6dfae03b3a84259bf1b9e | | Yes |
-| sysdig_key | 55e7f496-af78-4e0d-89f7-fa040e259ebd | | Yes |
-| app_name | (website) | | No |
-| source_db | 172.21.1.4 | | No |
-| replica_db | 172.21.9.4 | | No |
+- Go to **Schematics** main page:
+  - Select **Actions**
+  - Select **Create action**   
+  - Enter a name for your action   
+  - Select **Create** to create your action
+- Go to **Settings** page:
+  - Enter the URL of the Github repository
+  - Select **Retrieve playbooks**
+- Go to "Define your variables":
+  - Select **Add input value** to add each variable
+  - Enter Key=dbpassword, Value=securepassw0rd, select Sensitive
+  - Enter Key=logdna_key, Value=143c30a06ac6dfae03b3a84259bf1b9e, select Sensitive
+  - Enter Key=sysdig_key, Value=55e7f496-af78-4e0d-89f7-fa040e259ebd, select Sensitive
+  - Enter Key=app_name, Value=(website)
+  - Enter Key=source_db, Value=172.21.1.4
+  - Enter Key=replica_db, Value=172.21.9.4
+- Select **Save**
 
 4.  From the workspace **Settings** page, click **Generate plan** 
 5.  Click **View log** to review the log files of your Terraform
