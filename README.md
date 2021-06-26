@@ -72,15 +72,17 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 2. Select **Inventories**
 3. Select **Create Inventory**
 4. Enter a name for your inventory
-5. Select **Define manually**
-6. Enter the following:
+5. Select **Define manual** and **Create inventory** with the following:
 
-| [webapptier] | [dbtier0] | [dbtier1] |
-| --- | --- | --- |
-| 172.21.0.4 | 172.21.1.4 | 172.21.9.4 |
-| 172.21.8.4 | | |
-
-7. Select **Create inventory**
+| |
+| --- |
+| [webapptier] |
+| 172.21.0.4 |
+| 172.21.8.4 |
+| [dbtier0] |
+| 172.21.1.4 |
+| [dbtier1] |
+| 172.21.9.4 |
 
 ### Action
 
@@ -93,7 +95,7 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 7. Enter URL of the Github repository
 8. Select **Retrieve playbooks**
 9. Go to **Define your variables**
-10. Select **Add input value** and **Save** for these variables:
+10. Select **Add input value** and **Save** with the following:
 
 | Key | Value | Sensitive |
 | --- | --- | --- |
