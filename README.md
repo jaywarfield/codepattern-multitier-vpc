@@ -25,14 +25,14 @@ High Level Architecture
   - Multiple database servers across two availability zones
   - A source/replica data replication strategy across availability zones
 
-## VPC Architecture
+## Architecture
 
-[Infrastructure Architecture](docs/images/webappvpc-infrastructure-architecture.svg)
+[Infrastructure](docs/images/webappvpc-infrastructure-architecture.svg)
 
-[Application Architecture](docs/images/application-data-flow.png)
+[Application](docs/images/application-data-flow.png)
 
 ## Instructions
 
-[Setup Instructions](docs/setup.md)
+[Setup](docs/setup.md)
 
-[Usage Instructions](docs/usage.md)
+[Usage](docs/usage.md)
