@@ -20,11 +20,11 @@ Infrastructure features:
 
 Application features:
 
-- [LAMP stack](https://en.wikipedia.org/wiki/LAMP_(software bundle) with Linux, MySQL, and PHP.
+- [LAMP stack](https://en.wikipedia.org/wiki/LAMP_(software bundle)) with Linux, MySQL, and PHP.
 - [NGINX](https://www.nginx.com/) is used as the Web Server.
 - [NGINX Unit](https://www.nginx.com/products/nginx-unit/) is used as the Application Server.
-- [WordPress](https://wordpress.com), a popular web, blog and e-commerce platform to demonstrate horizontal scalability across zones.
-- [MySQL](https://www.mysql.com), a typical open source database, to demonstrate multiple database servers and replication strategy across zones.
+- [WordPress](https://wordpress.com) (popular web, blog and e-commerce platform) demonstrates horizontal scalability across zones.
+- [MySQL](https://www.mysql.com) (typical open source database) demonstrates multiple database servers and replication strategy across zones.
 
 ## Architecture
 
