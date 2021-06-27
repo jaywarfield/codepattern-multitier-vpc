@@ -42,7 +42,7 @@ High Level Architecture
 <details>
 <summary>Setup</summary>
 
-![Setup](docs/setup.md)
+[Setup](docs/setup.md)
 
 </details>
 
