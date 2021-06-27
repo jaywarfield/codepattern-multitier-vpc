@@ -1,6 +1,6 @@
 # Automate deployment of Multitier Web App in IBM VPC
 
-## Purpose
+## Overview
 
 Automate infrastructure deployment and configuration for [IBM VPC](https://cloud.ibm.com/docs/vpc) with [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started):
 - [Schematics Workspace](https://cloud.ibm.com/docs/schematics?topic=schematics-workspace-setup) [(Terraform)](https://www.terraform.io/)
@@ -36,15 +36,15 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 ## Setup Instructions
 
-### Preliminary
+### Setup Access
 
 1. Make sure that you have the required [IAM permissions](https://cloud.ibm.com/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure and [Schematics permissions](https://cloud.ibm.com/docs/schematics?topic=schematics-access) to create the workspace and deploy resources.
 
 2. Generate an [SSH key](https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys). The SSH key is required to access the provisioned VPC virtual server instances via the bastion host. After you have created your SSH key, make sure to upload this SSH key to your [account](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console) in the VPC region and resource group where you want to deploy this example.
 
-### Workspace
+### Schematics Workspace
 
-1. Go to **Schematics** main page
+1. Go to **Schematics**
 2. Select Workspaces
 3. Select **Create workspace**   
 4. Enter a name for your workspace   
@@ -65,9 +65,9 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | domain | string | mydomain.com |  your-domain.com | No |
 | cis-instance-name | string | mydomain.com |  your-domain.com | No |
 
-### Action
+### Schematics Action
 
-1. Go to **Schematics** main page
+1. Go to **Schematics**
 2. Select **Actions**
 3. Select **Create action**   
 4. Enter a name for your action   
@@ -113,9 +113,9 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 
 ## Usage Instructions
 
-### Workspace
+### Schematics Workspace
 
-1. Go to **Schematics** main page
+1. Go to **Schematics**
 2. Select Workspaces
 3. Select your workspace
 4. Select **Generate plan** to review plan
@@ -141,10 +141,22 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | webappserver2 | 172.21.8.4 |
 | ssh-webappserver2 | ssh -o ProxyJump=root@bastionIP2 root@172.21.8.4 |
 
-### Action
+### Schematics Action
 
-1. Go to **Schematics** main page
+1. Go to **Schematics**
 2. Select **Actions**
 3. Select your action
 8. Select **Run action**
 9. Select **View log** to review the run action log
+
+
+### Internet Services
+
+1. Go to Internet Services
+2. Select **pricing plan**
+3. Enter a name for your service
+4. Select **Create**
+5. Select **Add domain**
+6. Enter the name for your domain specified in Schematics
+7. Select **Next**
+9. Refer to the **New NS records** where your domain name is registered
