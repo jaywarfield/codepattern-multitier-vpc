@@ -27,9 +27,11 @@ High Level Architecture
 
 ## Architecture
 
-### Infrastructure
+<details><summary>Infrastructure</summary>
 
 ![Infrastructure](docs/images/webappvpc-infrastructure-architecture.svg)
+
+</details>
 
 ### Application
 
