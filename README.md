@@ -40,8 +40,7 @@ High Level Architecture
 ## Instructions
 
 <details>
-<summary><Setup></summary>
-[Setup](docs/setup.md)
+<summary>[Setup](docs/setup.md)</summary>
 </details>
 
 <details>
