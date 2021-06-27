@@ -3,10 +3,8 @@
 ## Purpose
 
 Automate infrastructure deployment and configuration for [IBM VPC](https://cloud.ibm.com/docs/vpc) utilizing:
-- [Terraform](https://www.terraform.io/)
-- [Ansible](https://www.redhat.com/en/technologies/management/ansible)
-- [Schematics Workspace (Terraform)](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started)
-- [Schematics Action (Ansible)](https://cloud.ibm.com/docs/schematics?topic=schematics-create-playbooks)
+- [Schematics Workspace](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started) [(Terraform)](https://www.terraform.io/)
+- [Schematics Action](https://cloud.ibm.com/docs/schematics?topic=schematics-create-playbooks) [(Ansible)](https://www.redhat.com/en/technologies/management/ansible)
   
 A [multitier](https://en.wikipedia.org/wiki/Multitier_architecture) architecture leverages VPC for public cloud isolation that separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs. Other features include Global DDOS, Global Load Balancing, VPN-as-a-Service and Bastion to estabilish remote secure connectivity between onprem and VPC, and SysDig and LogDNA for infrastructure and application monitoring. [WordPress](https://wordpress.com), a popular web, blog and e-commerce platform, is deployed into two different available zones. [MySQL](https://www.mysql.com), a typical open source database, is deployed on multiple database servers with a source/replica data replication strategy across two availability zones and installed on a [LAMP stack](https;//en.wikipedia.org/wiki/LAMP). [Nginx](https://www.nginx.com/) and [Nginx Unit](https://www.nginx.com/products/nginx-unit/) are used as the Web Server and Application Servers respectively.
 
@@ -67,13 +65,36 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | domain | string | mydomain.com |  your-domain.com | No |
 | cis-instance-name | string | mydomain.com |  your-domain.com | No |
 
-### Inventory
+### Action
 
 1. Go to **Schematics** main page
-2. Select **Inventories**
-3. Select **Create Inventory**
-4. Enter a name for your inventory
-5. Select **Define manual** and **Create inventory** with the following:
+2. Select **Actions**
+3. Select **Create action**   
+4. Enter a name for your action   
+5. Select **Create** to create your action
+6. Go to **Settings** page
+7. Enter URL of the Github repository
+8. Select **Retrieve playbooks**
+9. Select playbooks/site.yaml
+10. Select **Advanced options**
+11. Select **Define your variables**
+12. Select **Add input value** with the following:
+
+| Key | Value | Sensitive |
+| --- | --- | --- |
+| dbpassword | securepassw0rd | Yes |
+| logdna_key | 143c30a06ac6dfae03b3a84259bf1b9e | Yes |
+| sysdig_key | 55e7f496-af78-4e0d-89f7-fa040e259ebd | Yes |
+| app_name | www<area>.yourdomain.com | No |
+| source_db | 172.21.1.4 | No |
+| replica_db | 172.21.9.4 | No |
+
+13. Select **Save**
+14. Select **Edit inventory**
+15. Enter **Bastion host IP** from Terraform output
+16. Select **Create Inventory**
+17. Enter a name for your inventory
+18. Select **Define manual** with the following:
 
 | Inventory |
 | --- |
@@ -85,27 +106,10 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 | [dbtier1] |
 | 172.21.9.4 |
 
-### Action
-
-1. Go to **Schematics** main page
-2. Select **Actions**
-3. Select **Create action**   
-4. Enter a name for your action   
-5. Select **Create** to create your action
-6. Go to **Settings** page
-7. Enter URL of the Github repository
-8. Select **Retrieve playbooks**
-9. Go to **Define your variables**
-10. Select **Add input value** and **Save** with the following:
-
-| Key | Value | Sensitive |
-| --- | --- | --- |
-| dbpassword | securepassw0rd | Yes |
-| logdna_key | 143c30a06ac6dfae03b3a84259bf1b9e | Yes |
-| sysdig_key | 55e7f496-af78-4e0d-89f7-fa040e259ebd | Yes |
-| app_name | www<area>.yourdomain.com | No |
-| source_db | 172.21.1.4 | No |
-| replica_db | 172.21.9.4 | No |
+19. Select **Create inventory**
+20. Enter **private SSH key** (ensure newline at end of key is included)
+21. Check **Use same key**
+16. Select **Save**
 
 ## Usage Instructions
 
@@ -142,9 +146,5 @@ The IBM VPC architecture of the solution showing public isolation for both Appli
 1. Go to **Schematics** main page
 2. Select **Actions**
 3. Select your action
-4. Select **Settings**
-5. Select **Edit inventory**
-6. Update **Bastion host IP** with IP from Terraform output
-7. Select **Save**
 8. Select **Run action**
 9. Select **View log** to review the run action log
