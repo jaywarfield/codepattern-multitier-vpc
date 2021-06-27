@@ -6,7 +6,7 @@ Automate infrastructure deployment and configuration for [IBM VPC](https://cloud
 - [Schematics Workspace](https://cloud.ibm.com/docs/schematics?topic=schematics-workspace-setup) [(Terraform)](https://www.terraform.io/)
 - [Schematics Action](https://cloud.ibm.com/docs/schematics?topic=schematics-create-playbooks) [(Ansible)](https://www.redhat.com/en/technologies/management/ansible)
   
-A [multitier](https://en.wikipedia.org/wiki/Multitier_architecture) architecture leverages VPC for public cloud isolation that separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs. 
+A [multitier](https://www.ibm.com/cloud/learn/three-tier-architecture) architecture leverages VPC for public cloud isolation that separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs. 
 
 Infrastructure features:
 
@@ -20,7 +20,7 @@ Infrastructure features:
 
 Application features:
 
-- [LAMP stack](https://en.wikipedia.org/wiki/LAMP_(software bundle)) with Linux, MySQL, and PHP.
+- [LAMP stack](https://www.ibm.com/cloud/learn/lamp-stack-explained) with Linux, MySQL, and PHP.
 - [NGINX](https://www.nginx.com/) is used as the Web Server.
 - [NGINX Unit](https://www.nginx.com/products/nginx-unit/) is used as the Application Server.
 - [WordPress](https://wordpress.com) (popular web, blog and e-commerce platform) demonstrates horizontal scalability across zones.
