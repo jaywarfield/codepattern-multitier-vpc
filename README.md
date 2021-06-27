@@ -33,15 +33,19 @@ High Level Architecture
 
 </details>
 
-### Application
+<details><summary>Application</summary>
 
 ![Application](docs/images/application-data-flow.png)
 
+</details>
+
 ## Instructions
 
-### Setup
+<details><summary>Setup</summary>
 
 ![Setup](docs/setup.md)
+
+</details>
 
 ### Usage
 
