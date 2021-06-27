@@ -29,18 +29,18 @@ High Level Architecture
 
 ### Infrastructure
 
-[Infrastructure](docs/images/webappvpc-infrastructure-architecture.svg)
+![Infrastructure](docs/images/webappvpc-infrastructure-architecture.svg)
 
 ### Application
 
-[Application](docs/images/application-data-flow.png)
+![Application](docs/images/application-data-flow.png)
 
 ## Instructions
 
 ### Setup
 
-[Setup](docs/setup.md)
+![Setup](docs/setup.md)
 
 ### Usage
 
-[Usage](docs/usage.md)
+![Usage](docs/usage.md)
