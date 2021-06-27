@@ -27,26 +27,10 @@ High Level Architecture
 
 ## Architecture
 
-<details><summary>Infrastructure</summary>
-
-![Infrastructure](docs/images/webappvpc-infrastructure-architecture.svg)
-
-</details>
-
-<details><summary>Application</summary>
-
-![Application](docs/images/application-data-flow.png)
-
-</details>
+![Architecture](docs/images/webappvpc-architecture.svg)
 
 ## Instructions
 
-<details><summary>Setup</summary>
-
 ![Setup](docs/setup.md)
-
-</details>
-
-### Usage
 
 ![Usage](docs/usage.md)
