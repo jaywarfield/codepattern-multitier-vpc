@@ -12,20 +12,15 @@ A [multitier](https://en.wikipedia.org/wiki/Multitier_architecture) architecture
 
 ![Architecture](docs/images/webappvpc-architecture.svg)
 
-| Infrastructure |
-| --- |
-| VPC public cloud isolation |
-| RFC1918 private bring-your-own-IP addresses |
+| Infrastructure | Application |
+| --- | --- |
+| VPC public cloud isolation | Horizontal scalability across zones |
+| RFC1918 private bring-your-own-IP addresses | Replicated databases across zones |
 | Application and data layers on isolated subnets and multiple zones |
-| Logical network isolation using Security Groups and ACLs |
-| Global DDOS and Global Load Balancing |
-| Bastion/VPN for remote secure connectivity |
-| SysDig & LogDNA for monitoring |
-
-| Application |
-| Horizontally scalable webapp deployed into multiple zones |
-| Multiple database servers across multiple zones |
-| Data replication strategy across multiple zones |
+| Logical network isolation using Security Groups and ACLs | |
+| Global DDOS and Global Load Balancing | |
+| Bastion/VPN for remote secure connectivity | |
+| SysDig & LogDNA for monitoring | |
 
 ## Instructions
 
