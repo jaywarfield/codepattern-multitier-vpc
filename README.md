@@ -27,7 +27,7 @@ High Level Architecture
 
 ## Architecture
 
-[Architecture](docs/images/webappvpc-architecture.svg)
+![Architecture](docs/images/webappvpc-architecture.svg)
 
 ## Instructions
 
