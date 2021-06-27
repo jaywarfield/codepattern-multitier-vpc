@@ -15,8 +15,8 @@ A [multitier](https://en.wikipedia.org/wiki/Multitier_architecture) architecture
 | Infrastructure | Application |
 | --- | --- |
 | VPC public cloud isolation | Horizontal scalability across zones |
-| RFC1918 private BYOIP | Replicated databases across zones |
-| Layers on isolated subnets across zones | |
+| RFC1918 private BYOIP | Multiple database servers across zones |
+| Layers on isolated subnets across zones | Data replication strategy across zones |
 | Logical isolation ACLs/Security Groups | |
 | Global DDOS and Global Load Balancing | |
 | Bastion/VPN for secure connectivity | |
