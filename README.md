@@ -15,11 +15,11 @@ A [multitier](https://en.wikipedia.org/wiki/Multitier_architecture) architecture
 | Infrastructure | Application |
 | --- | --- |
 | VPC public cloud isolation | Horizontal scalability across zones |
-| RFC1918 private bring-your-own-IP addresses | Replicated databases across zones |
-| Application and data layers on isolated subnets and multiple zones |
-| Logical network isolation using Security Groups and ACLs | |
+| RFC1918 private BYOIP | Replicated databases across zones |
+| Layers on isolated subnets across zones | |
+| Logical isolation ACLs/Security Groups | |
 | Global DDOS and Global Load Balancing | |
-| Bastion/VPN for remote secure connectivity | |
+| Bastion/VPN for secure connectivity | |
 | SysDig & LogDNA for monitoring | |
 
 ## Instructions
