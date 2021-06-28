@@ -8,7 +8,7 @@
 
 ### Schematics Workspace
 
-1. Go to **Schematics**
+1. Go to **Schematics** in cloud portal
 2. Select Workspaces
 3. Select **Create workspace**   
 4. Enter a name for your workspace   
@@ -31,7 +31,7 @@
 
 ### Schematics Action
 
-1. Go to **Schematics**
+1. Go to **Schematics** in cloud portal
 2. Select **Actions**
 3. Select **Create action**   
 4. Enter a name for your action   

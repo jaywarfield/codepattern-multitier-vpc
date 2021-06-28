@@ -2,7 +2,7 @@
 
 ### Schematics Workspace
 
-1. Go to **Schematics**
+1. Go to **Schematics** in cloud portal
 2. Select Workspaces
 3. Select your workspace
 4. Select **Generate plan** to review plan
@@ -30,7 +30,7 @@
 
 ### Schematics Action
 
-1. Go to **Schematics**
+1. Go to **Schematics** in cloud portal
 2. Select **Actions**
 3. Select your action
 8. Select **Run action**
@@ -39,7 +39,7 @@
 
 ### Internet Services
 
-1. Go to Internet Services
+1. Go to **Internet Services** in cloud portal
 2. Select **pricing plan**
 3. Enter a name for your service
 4. Select **Create**
