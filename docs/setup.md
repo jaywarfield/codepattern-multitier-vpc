@@ -11,15 +11,16 @@
 1. Go to **Schematics** in cloud portal
 2. Select Workspaces
 3. Select **Create workspace**   
-4. Enter a name for your workspace   
-5. Select **Create** to create your workspace
-6. Go to **Settings** page in your workspace
-7. Enter the URL of this example in the Github repository
-8. Select the Terraform version: terraform_v0.14
-9. Select **Save template information**
-10. Go to **Variables**
-11. Review the **Defaults** for each variable
-12. Select **Edit** and uncheck "Use default" to customize values, in particular:
+4. Enter a name  
+5. Select **Location**
+6. Select **Create** 
+7. Go to **Settings**
+8. Enter the GitHub URL 
+9. Select a **Terraform version** (tested with terraform_v0.14)
+10. Select **Save template information**
+11. Go to **Variables**
+12. Review the **Defaults** for each variable
+13. Select **Edit** and uncheck "Use default" to customize values and select **Save**, in particular:
 
 | Name | Type | Default | Override value | Sensitive |
 | --- | --- | --- | --- | --- |
