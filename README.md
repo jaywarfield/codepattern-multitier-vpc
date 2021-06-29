@@ -6,7 +6,7 @@
 
 In this code pattern, we will demonstrate using [Terraform](https://www.terraform.io/) and [Ansible](https://www.redhat.com/en/technologies/management/ansible) to automate infrastucture deployment and configuration using [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started) for a [multitier](https://www.ibm.com/cloud/learn/three-tier-architecture) architecture that leverages [IBM VPC](https://cloud.ibm.com/docs/vpc) for public cloud isolation that separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs. 
 
-Infrastructure features include:
+Infrastructure features used include:
 
 - VPC public cloud isolation.
 - Logical network isolation using Security Groups and ACLs.
@@ -16,7 +16,7 @@ Infrastructure features include:
 - Bastion and VPN for secure connectivity between on-premise and VPC.
 - SysDig and LogDNA for infrastructure and application monitoring. 
 
-Application products include:
+Application products used include:
 
 - [LAMP stack](https://www.ibm.com/cloud/learn/lamp-stack-explained) with Linux, MySQL, and PHP.
 - [NGINX](https://www.nginx.com/) is used as the Web Server.
