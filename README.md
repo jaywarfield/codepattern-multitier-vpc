@@ -86,7 +86,7 @@ Use the **Deploy to IBM Cloud** button **OR** create the services and run locall
 4. [Create Schematics Action](#4-create-schematics-action).
 5. [Apply Schematics Workspace](#5-apply-schematics-workspace).
 6. [Run Schematics Action](#6-run-schematics-action).
-7. [Configure Internet Services](#7-run-the-application).
+7. [Configure Internet Service](#7-configure-internet-service).
 
 ### 1. Clone repo
 
@@ -213,7 +213,7 @@ We’ll be using the file [`data/assistant/workspaces/banking.json`](data/assist
 * Select **Run action**
 * Select **View log** to review the run action log
 
-### 7. Configure Internet Services
+### 7. Configure Internet Service
 
 * Go to **Internet Services** in cloud portal
 * Select **pricing plan**
