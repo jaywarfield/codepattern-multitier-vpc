@@ -30,17 +30,17 @@ When you have completed this code pattern, you will understand how to:
 * How to use [Schematics Workspaces](https://cloud.ibm.com/docs/schematics?topic=schematics-workspace-setup) with Terraform.
 * How to use [Schematics Actions](https://cloud.ibm.com/docs/schematics?topic=schematics-create-playbooks) with Ansible.
   
-<!--add an image in this path-->
 ![architecture](doc/source/images/webappvpc-architecture.svg)
 
-<!--Optionally, add flow steps based on the architecture diagram-->
 ## Flow
 
-1. Step 1.
-2. Step 2.
-3. Step 3.
-4. Step 4.
-5. Step 5.
+1. Users access website from Internet which invokes Global LB.
+2. Global LB invokes Public ALB which balances load to frontend VSIs across zones.
+3. Subnets have egress-only access to the Internet via Public Gateways.
+4. Frontend VSIs have NGINX, NGINX Unit, and Wordpress configured to define the website.
+5. Frontend VSIs use the databases in the backend VSIs.
+6. Databases are configured for replication across zones.
+7. Enterprise users access the VSIs via Bastion or VPN connecction.
 
 <!--Optionally, update this section when the video is created-->
 <!--
