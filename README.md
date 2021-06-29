@@ -37,7 +37,7 @@ When you have completed this code pattern, you will understand how to:
 1. Users access website from Internet which invokes Global LB.
 2. Global LB invokes Public ALB which balances load to frontend VSIs across zones.
 3. Subnets have egress-only access to the Internet via Public Gateways.
-4. Frontend VSIs have NGINX, NGINX Unit, and Wordpress configured to define the website.
+4. Frontend VSIs have NGINX, NGINX Unit, and Wordpress configured to implement the website.
 5. Frontend VSIs use the databases in the backend VSIs.
 6. Databases are configured for replication across zones.
 7. Enterprise users access the VSIs via Bastion or VPN connecction.
