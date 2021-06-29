@@ -4,7 +4,7 @@
 
 # Automate deployment of Multitier Web App in IBM VPC
 
-In this code pattern, we will demonstrate using [Terraform](https://www.terraform.io/) and [Ansible](https://www.redhat.com/en/technologies/management/ansible) to automate infrastucture deployment and configuration using [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started) for a [multitier](https://www.ibm.com/cloud/learn/three-tier-architecture) web application in [IBM VPC](https://cloud.ibm.com/docs/vpc).  A multitier architecture leverages VPC for public cloud isolation that separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs. 
+In this code pattern, we will demonstrate using [Terraform](https://www.terraform.io/) and [Ansible](https://www.redhat.com/en/technologies/management/ansible) to automate infrastucture deployment and configuration using [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started) for a [multitier](https://www.ibm.com/cloud/learn/three-tier-architecture) architecture that leverages [IBM VPC](https://cloud.ibm.com/docs/vpc) for public cloud isolation that separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs. 
 
 Infrastructure features include:
 
