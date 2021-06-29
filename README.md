@@ -16,7 +16,7 @@ Infrastructure features include:
 - Bastion and VPN for secure connectivity between on-premise and VPC.
 - SysDig and LogDNA for infrastructure and application monitoring. 
 
-Application features include:
+Application products include:
 
 - [LAMP stack](https://www.ibm.com/cloud/learn/lamp-stack-explained) with Linux, MySQL, and PHP.
 - [NGINX](https://www.nginx.com/) is used as the Web Server.
@@ -43,28 +43,29 @@ When you have completed this code pattern, you will understand how to:
 5. Step 5.
 
 <!--Optionally, update this section when the video is created-->
+<!--
 # Watch the Video
 
 [![video](http://img.youtube.com/vi/Jxi7U7VOMYg/0.jpg)](https://www.youtube.com/watch?v=Jxi7U7VOMYg)
+-->
 
 # Steps
 
 <!--
 Use the **Deploy to IBM Cloud** button **OR** create the services and run locally.
+-->
 
 <!-- Optionally, add a deploy to ibm cloud button-->
 
+<!--
 ## Deploy to IBM Cloud
 
 [![Deploy to IBM Cloud](https://cloud.ibm.com/deploy/button.png)](https://cloud.ibm.com/deploy?repository=https://github.com/IBM/watson-banking-chatbot.git)
 
 1. Press **Deploy to IBM Cloud**, and then click **Deploy**.
 
-<!--optional step-->
 2. In Toolchains, click **Delivery Pipeline** to watch while the app is deployed. After it's deployed, the app can be viewed by clicking **View app**.
 ![toolchain pipeline](doc/source/images/toolchain-pipeline.png)
-
-<!--update with service names from manifest.yml-->
 
 3. To see the app and services created and configured for this code pattern, use the IBM Cloud dashboard. The app is named `watson-banking-chatbot` with a unique suffix. The following services are created and easily identified by the `wbc-` prefix:
     * `wbc-conversation-service`
