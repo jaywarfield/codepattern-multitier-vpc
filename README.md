@@ -228,9 +228,11 @@ We’ll be using the file [`data/assistant/workspaces/banking.json`](data/assist
 # Sample output
 
 ![sample_output](doc/source/images/sample_output.png)
+-->
 
 <!--Optionally, include any troubleshooting tips (driver issues, etc)-->
 
+<!--
 # Troubleshooting
 
 * Error: Environment {GUID} is still not active, retry once status is active
