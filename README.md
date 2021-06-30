@@ -37,12 +37,12 @@ When you have completed this code pattern, you will understand how to:
 ## Infrastructure Flow
 
 1. Users access website from Internet.
-2. From Internet The website invokes Global LB.
+2. The website invokes Global LB.
 3. Global LB invokes Public ALB.
 4. Public ALB balances load to frontend VSIs across zones.
 5. Frontend VSIs invoke backend VSIs.
 6. Enterprise users access the VSIs via Floating IP to Bastion Host.
-7. Enterprise apps access the VSIs via VPN connecction.
+7. Enterprise apps access the VSIs via VPN connection.
 
 <!--
 1. Users access website from Internet which invokes Global LB.
