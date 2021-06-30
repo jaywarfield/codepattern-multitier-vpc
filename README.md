@@ -32,7 +32,7 @@ When you have completed this code pattern, you will understand how to:
   
 ## Infrastructure Architecture
 
-![architecture](doc/source/images/webappvpc-infrastructure-architecture.svg)
+![infrastructure](doc/source/images/webappvpc-architecture-Infrastructure.svg)
 
 ## Infrastructure Flow
 
@@ -44,16 +44,20 @@ When you have completed this code pattern, you will understand how to:
 6. Enterprise users access the VSIs via Floating IP to Bastion Host.
 7. Enterprise apps access the VSIs via VPN connection.
 
-<!--
-1. Users access website from Internet which invokes Global LB.
-2. Global LB invokes Public ALB.
-3. Public ALB balances load to frontend VSIs across zones.
-4. Subnets have egress-only access to the Internet via Public Gateways.
-4. Frontend VSIs have NGINX, NGINX Unit, and Wordpress configured to implement the website.
-5. Frontend VSIs use the databases in the backend VSIs.
-6. Databases are configured for replication across zones.
-7. Enterprise users access the VSIs via Bastion or VPN connecction.
--->
+## Application Architecture
+
+![application](doc/source/images/webappvpc-architecture-Application.svg)
+
+## Application Flow
+
+1. Users access website from Internet.
+2. The website invokes Global LB.
+3. Global LB invokes Public ALB.
+4. Public ALB balances load to frontend VSIs across zones.
+5. Frontend VSIs have NGINX, NGINX Unit, and Wordpress configured to implement the website.
+6. Frontend VSIs use the source database in the backend VSI.
+7. Frontend VSIs use the replica database in the backend VSI when necessary.
+8. Source and replica Databases are configured for replication across zones.
 
 <!--Optionally, update this section when the video is created-->
 <!--
