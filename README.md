@@ -40,9 +40,10 @@ When you have completed this code pattern, you will understand how to:
 2. The website invokes Global LB.
 3. Global LB invokes Public ALB.
 4. Public ALB balances load to frontend VSIs across zones.
-5. Frontend VSIs invoke backend VSIs.
-6. Enterprise users access the VSIs via Floating IP to Bastion Host.
-7. Enterprise apps access the VSIs via VPN connection.
+5. Subnets have egress-only access via Public Gateway to Internet.
+6. Frontend VSIs invoke backend VSIs.
+7. Enterprise users access the VSIs via Floating IP to Bastion Host.
+8. Enterprise apps access the VSIs via VPN connection.
 
 ## Application Architecture
 
