@@ -3,8 +3,9 @@
 [![Build Status](https://travis-ci.org/IBM/watson-banking-chatbot.svg?branch=master)](https://travis-ci.org/IBM/watson-banking-chatbot)
 
 # Automate deployment of Multitier Web App in IBM VPC
+In this code pattern we will demonstrate using [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started) with Schematics Workspace ([Terraform](https://www.terraform.io/)) and Schematics Action ([Ansible](https://www.redhat.com/en/technologies/management/ansible)) to automate infrastucture deployment and configuration for a [multitier](https://www.ibm.com/cloud/learn/three-tier-architecture) architecture that leverages [IBM VPC](https://cloud.ibm.com/docs/vpc) for public cloud isolation and separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs.  This automated approach leverages [Solution Tutorial - Use Virtual Servers to build highly available and scalable web app](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-highly-available-and-scalable-web-application#use-virtual-servers-to-build-highly-available-and-scalable-web-app).
 
-In this code pattern we will demonstrate using [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started) utilizing Schematics Workspace ([Terraform](https://www.terraform.io/)) and Schematics Action ([Ansible](https://www.redhat.com/en/technologies/management/ansible)) to automate infrastucture deployment and configuration for a [multitier](https://www.ibm.com/cloud/learn/three-tier-architecture) architecture that leverages [IBM VPC](https://cloud.ibm.com/docs/vpc) for public cloud isolation that separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs.  This automated approach leverages [Solution Tutorials - Use Virtual Servers to build highly available and scalable web app](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-highly-available-and-scalable-web-application#use-virtual-servers-to-build-highly-available-and-scalable-web-app).
+Main objective of this code pattern is to educate Web App developers, enterprise DevOps  users, and system administrators on how to leverage the features and  tools for IBM Cloud VPC Infrastructure to deploy and fully configure a working n-tier application.
 
 Infrastructure features used include:
 
@@ -24,8 +25,8 @@ Application products used include:
 - [WordPress](https://wordpress.com) (popular web, blog and e-commerce platform) demonstrates horizontal scalability across zones.
 - [MySQL](https://www.mysql.com) (typical open source database) demonstrates multiple database servers and replication strategy across zones.
 
-When you have completed this code pattern, you will understand how to:
-* How to provision and configure a complete and functioning VPC environment.
+When you have completed this code pattern, you will understand:
+* How to provision and configure a working VPC environment.
 * How to create Terraform scripts and use [Schematics Workspace](https://cloud.ibm.com/docs/schematics?topic=schematics-workspace-setup) to provision infrastructure.
 * How to create Ansible playbooks and use [Schematics Action](https://cloud.ibm.com/docs/schematics?topic=schematics-create-playbooks) to configure infrastructure.
   
