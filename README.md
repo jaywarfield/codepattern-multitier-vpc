@@ -5,8 +5,6 @@
 # Automate deployment of Multitier Web App in IBM VPC
 In this code pattern we will demonstrate using [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started) with Schematics Workspace ([Terraform](https://www.terraform.io/)) and Schematics Action ([Ansible](https://www.redhat.com/en/technologies/management/ansible)) to automate infrastucture deployment and configuration for a [multitier](https://www.ibm.com/cloud/learn/three-tier-architecture) architecture that leverages [IBM VPC](https://cloud.ibm.com/docs/vpc) for public cloud isolation and separates the web/application and data tiers by deploying VSIs into isolated subnets across different availability zones with network isolation defined using Security Groups and ACLs.  This automated approach leverages [Solution Tutorial - Use Virtual Servers to build highly available and scalable web app](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-highly-available-and-scalable-web-application#use-virtual-servers-to-build-highly-available-and-scalable-web-app).
 
-Main objective of this code pattern is to educate Web App developers, enterprise DevOps  users, and system administrators on how to leverage the features and  tools for IBM Cloud VPC Infrastructure to deploy and fully configure a working n-tier application.
-
 Infrastructure features used include:
 
 - VPC public cloud isolation.
