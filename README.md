@@ -26,7 +26,7 @@ Application products used include:
 
 When you have completed this code pattern, you will understand how to:
 * How to provision and configure a complete and functioning VPC environment.
-* How to create Terraform scripts and use [Schematics Workspace](https://cloud.ibm.com/docs/schematics?topic=schematics-workspace-setup) to provision infrasructure.
+* How to create Terraform scripts and use [Schematics Workspace](https://cloud.ibm.com/docs/schematics?topic=schematics-workspace-setup) to provision infrastructure.
 * How to create Ansible playbooks and use [Schematics Action](https://cloud.ibm.com/docs/schematics?topic=schematics-create-playbooks) to configure infrastructure.
   
 ## Infrastructure Architecture
