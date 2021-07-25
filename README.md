@@ -25,10 +25,9 @@ Application products used include:
 - [MySQL](https://www.mysql.com) (typical open source database) demonstrates multiple database servers and replication strategy across zones.
 
 When you have completed this code pattern, you will understand how to:
-* How to create Terraform to provision infrastructure.
-* How to create Ansible to configure infrastructure.
-* How to use [Schematics Workspaces](https://cloud.ibm.com/docs/schematics?topic=schematics-workspace-setup) with Terraform.
-* How to use [Schematics Actions](https://cloud.ibm.com/docs/schematics?topic=schematics-create-playbooks) with Ansible.
+* How to provision and configure a complete and functioning VPC environment.
+* How to create Terraform scripts and use [Schematics Workspace](https://cloud.ibm.com/docs/schematics?topic=schematics-workspace-setup) to provision infrasructure.
+* How to create Ansible playbooks and use [Schematics Action](https://cloud.ibm.com/docs/schematics?topic=schematics-create-playbooks) to configure infrastructure.
   
 ## Infrastructure Architecture
 
