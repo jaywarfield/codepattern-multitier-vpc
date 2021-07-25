@@ -43,7 +43,7 @@ When you have completed this code pattern, you will understand:
 5. Subnets have egress-only access via Public Gateway to Internet.
 6. Frontend VSIs invoke backend VSIs.
 7. Enterprise users access the VSIs via Floating IP to Bastion Host.
-8. Enterprise apps access the VSIs via VPN connection.
+8. Enterprise users/apps can also access the VSIs via VPN connection.
 
 ## Application Architecture
 
