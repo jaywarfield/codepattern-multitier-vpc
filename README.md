@@ -232,13 +232,19 @@ We’ll be using the file [`data/assistant/workspaces/banking.json`](data/assist
 ### 7. Configure Internet Service
 
 * Go to **Internet Services** in cloud portal
-* Select **pricing plan**
-* Enter a name for your service
+* Select **pricing plan** of Free Trial
+* Enter a name in the **Service name**
+* Select a resource group
+* Optionally enter tags
 * Select **Create**
 * Select **Add domain**
-* Enter the name for your domain specified in Schematics
+* Enter a name in the **Domain name** for your domain specified in Schematics
 * Select **Next**
-* Refer to the **New NS records** where your domain name is registered
+* Skip **Setup your DNS records (optional)** 
+* Select **Next**
+* Note the **New NS records**
+* Select **Cancel** to not update the new NS records 
+* Wait for status to change from **Pending** to **Active**
 
 <!--
 # Sample output
