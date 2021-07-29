@@ -102,7 +102,7 @@ Use the **Deploy to IBM Cloud** button **OR** create the services and run locall
 4. [Create Schematics Action](#4-create-schematics-action).
 5. [Apply Schematics Workspace](#5-apply-schematics-workspace).
 6. [Run Schematics Action](#6-run-schematics-action).
-7. [Configure Internet Service](#7-configure-internet-service).
+7. [Validate Internet Service](#7-validate-internet-service).
 
 ### 1. Clone repo
 
@@ -229,22 +229,12 @@ We’ll be using the file [`data/assistant/workspaces/banking.json`](data/assist
 * Select **Run action**
 * Select **View log** to review the run action log
 
-### 7. Configure Internet Service
+### 7. Validate Internet Service
 
 * Go to **Internet Services** in cloud portal
-* Select **pricing plan** of Free Trial
-* Enter a name in the **Service name**
-* Select a resource group
-* Optionally enter tags
-* Select **Create**
-* Select **Add domain**
-* Enter a name in the **Domain name** for your domain specified in Schematics
-* Select **Next**
-* Skip **Setup your DNS records (optional)** 
-* Select **Next**
-* Note the **New NS records**
-* Select **Cancel** to not update the new NS records 
+* Select the service name you specified in Terraform
 * Wait for status to change from **Pending** to **Active**
+* Note the NS records
 
 <!--
 # Sample output
