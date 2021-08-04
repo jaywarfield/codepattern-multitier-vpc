@@ -30,7 +30,7 @@
     backrefs: yes
 
 - name: Disable default sites-enabled in nginx.conf
-  shell: rm /etc/sites-enabled/default
+  shell: rm /etc/nginx/sites-enabled/default
   become: yes
 
 - name: Update nginx with wordpress config
