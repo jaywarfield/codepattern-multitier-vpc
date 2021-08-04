@@ -29,12 +29,9 @@
     line:     server_name localhost {{ app_name }} {{ ansible_host }};
     backrefs: yes
 
-- name: Disable sites-enabled in nginx.conf
-  lineinfile:
-    dest: /etc/nginx/nginx.conf
-    regexp: '^(.*)include /etc/nginx/sites-enabled/*;(.*)$'
-    line:     \#include /etc/nginx/sites-enabled/*;
-    backrefs: yes
+- name: Disable default sites-enabled in nginx.conf
+  shell: rm /etc/sites-enabled/default
+  become: yes
 
 - name: Update nginx with wordpress config
   shell: curl -X PUT --data-binary @/var/www/wordpress/wordpress.config --unix-socket /run/control.unit.sock http://localhost/config
