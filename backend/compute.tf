@@ -15,7 +15,7 @@ resource "ibm_is_instance" "dbserver-zone1" {
     subnet          = var.dbtier-subnet-zone1-id
     security_groups = [var.dbtier-securitygroup-id, var.maintenance-securitygroup-id]
   }
-  #user_data      = data.template_cloudinit_config.cloudinit-dbtier.rendered
+  user_data      = data.template_cloudinit_config.cloudinit-dbtier.rendered
   resource_group = var.group-id
   count          = var.dbserver-count
 }
@@ -35,7 +35,7 @@ resource "ibm_is_instance" "dbserver-zone2" {
     subnet          = var.dbtier-subnet-zone2-id
     security_groups = [var.dbtier-securitygroup-id, var.maintenance-securitygroup-id]
   }
-  #user_data      = data.template_cloudinit_config.cloudinit-dbtier.rendered
+  user_data      = data.template_cloudinit_config.cloudinit-dbtier.rendered
   resource_group = var.group-id
   count          = var.dbserver-count
 }

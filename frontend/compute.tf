@@ -15,7 +15,7 @@ resource "ibm_is_instance" "webappserver-zone1" {
     subnet          = var.webapptier-subnet-zone1-id
     security_groups = [var.webapptier-securitygroup-id, var.maintenance-securitygroup-id]
   }
-  #user_data      = data.template_cloudinit_config.cloudinit-webapptier.rendered
+  user_data      = data.template_cloudinit_config.cloudinit-webapptier.rendered
   resource_group = var.group-id
   count          = var.webappserver-count
 }
@@ -35,7 +35,7 @@ resource "ibm_is_instance" "webappserver-zone2" {
     subnet          = var.webapptier-subnet-zone2-id
     security_groups = [var.webapptier-securitygroup-id, var.maintenance-securitygroup-id]
   }
-  #user_data      = data.template_cloudinit_config.cloudinit-webapptier.rendered
+  user_data      = data.template_cloudinit_config.cloudinit-webapptier.rendered
   resource_group = var.group-id
   count          = var.webappserver-count
 }

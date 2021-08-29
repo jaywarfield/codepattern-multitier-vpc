@@ -5,20 +5,31 @@ data "template_cloudinit_config" "cloudinit-dbtier" {
   part {
     content = <<EOF
 #cloud-config
+apt:
+  primary:
+    - arches: [default]
+      uri:  http://mirrors.adn.networklayer.com/ubuntu
 package_update: true
 package_upgrade: true
 packages:
+ - locales
+ - build-essential
+ - acl
+ - ntp
+ - htop
+ - git
+ - supervisor
+ - python3-pip
+ - mysql-client
  - mysql-server
- - mysql
-
-runcmd:
- - /bin/systemctl enable mysqld
+ - python3-pymysql
 
 power_state:
  mode: reboot
  message: Rebooting server now.
  timeout: 30
  condition: True
+
  
 EOF
 
