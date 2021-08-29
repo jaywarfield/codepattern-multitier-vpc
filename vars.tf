@@ -63,8 +63,10 @@ variable "ssh-public-key" {
   description = "Define ssh key for compute instances"
 }
 variable "image" {
-  description = "Define OS image for compute instances (ubuntu-20-04-amd64)"
-  default     = "r006-988caa8b-7786-49c9-aea6-9553af2b1969"
+  description = "Define OS image for compute instances (ibm-redhat-8-3-minimal-amd64-3"
+  default     = "r006-c803a85a-e3cf-4f61-bafa-ae1d9e759d15"
+#  description = "Define OS image for compute instances (ubuntu-20-04-amd64)"
+#  default     = "r006-988caa8b-7786-49c9-aea6-9553af2b1969"
 }
 variable "webappserver-name" {
   description = "Define webapp instance name"
