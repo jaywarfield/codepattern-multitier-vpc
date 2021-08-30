@@ -21,15 +21,15 @@ variable "dns-name" {
 }
 variable "region" {
   description = "Define region"
-  default     = "us-east"
+  default     = "us-south"
 }
 variable "zone1" {
   description = "Define zone1"
-  default     = "us-east-1"
+  default     = "us-south-1"
 }
 variable "zone2" {
   description = "Define zone2"
-  default     = "us-east-2"
+  default     = "us-south-2"
 }
 variable "address-prefix-vpc" {
   description = "Define cidr block for vpc"
