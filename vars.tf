@@ -63,8 +63,10 @@ variable "ssh-public-key" {
   description = "Define ssh key for compute instances"
 }
 variable "image" {
-  description = "Define OS image for compute instances (ubuntu-20-04-2-amd64)"
-  default = "r006-396ef8b6-91a3-48ce-a83b-0c6f67105cad"
+  description = "Define OS image for compute instances (ibm-redhat-8-4-amd64)"
+  default = "r006-bf22526d-a650-49bb-bc6e-3275694d2b27"
+#  description = "Define OS image for compute instances (ubuntu-20-04-2-amd64)"
+#  default = "r006-396ef8b6-91a3-48ce-a83b-0c6f67105cad"
 #  description = "Define OS image for compute instances (ibm-centos-8-3-minimal-amd64-3)"
 #  default     = "r006-de4fc543-2ce1-47de-b0b8-b98556a741da"
 #  description = "Define OS image for compute instances (ibm-redhat-8-3-minimal-amd64-3"

@@ -11,11 +11,11 @@ variable "debian-10-8-amd64" {
 variable "debian-9-13-amd64" {
   default = "r006-8e4826f3-1394-40cf-af8f-c5e93039935b"
 }
+variable "redhat-8-4-amd64" {
+  default = "r006-bf22526d-a650-49bb-bc6e-3275694d2b27"
+}
 variable "redhat-8-3-amd64" {
   default = "r006-c803a85a-e3cf-4f61-bafa-ae1d9e759d15"
-}
-variable "redhat-7-9-amd64" {
-  default = "r006-e279f5d7-fa19-4294-979e-7a6d048fbe71"
 }
 variable "ubuntu-20-04-2-amd64" {
   default = "r006-396ef8b6-91a3-48ce-a83b-0c6f67105cad"
