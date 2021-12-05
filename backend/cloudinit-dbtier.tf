@@ -8,8 +8,8 @@ data "template_cloudinit_config" "cloudinit-dbtier" {
 package_update: true
 package_upgrade: true
 packages:
- - mysql
  - mysql-server
+ - mysql
  - python3-PyMySQL
 
 runcmd:
