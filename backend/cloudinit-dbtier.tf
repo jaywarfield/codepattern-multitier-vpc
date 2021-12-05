@@ -10,7 +10,7 @@ package_upgrade: true
 packages:
  - mysql
  - mysql-server
- - python3-pymysql
+ - python3-PyMySQL
 
 runcmd:
  - /bin/systemctl enable mysqld
