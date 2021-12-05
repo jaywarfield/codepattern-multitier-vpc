@@ -8,8 +8,9 @@ data "template_cloudinit_config" "cloudinit-dbtier" {
 package_update: true
 package_upgrade: true
 packages:
- - mysql-server
  - mysql
+ - mysql-server
+ - python3-pymysql
 
 runcmd:
  - /bin/systemctl enable mysqld

@@ -1,10 +1,10 @@
 ---
 # Basic Setup of MySQL
 
-- name: Change mysqld.cnf to listen on all interfaces
-  shell: |
-    sed -i "s/^\(bind-address\s*=\s*\).*\$/\10.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
-  become: yes
+#- name: Change mysqld.cnf to listen on all interfaces
+#  shell: |
+#    sed -i "s/^\(bind-address\s*=\s*\).*\$/\10.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
+#  become: yes
 
 - name: Create wordpress database on the server
   mysql_db:
@@ -23,13 +23,13 @@
     host: '%'
     state: present
 
-- name: Add logDNA tag
-  shell: logdna-agent -t database
-  become: yes
+#- name: Add logDNA tag
+#  shell: logdna-agent -t database
+#  become: yes
 
-- name: restart LogDNA
-  shell: service logdna-agent restart
-  become: yes
+#- name: restart LogDNA
+#  shell: service logdna-agent restart
+#  become: yes
 
 - name: Install & Configure sysdig on DB server
   shell: |

@@ -75,13 +75,13 @@
     chmod -R g+w /var/www/wordpress/wp-content/plugins
   become: yes
 
-- name: Add LogDNA tag for webapp
-  shell: logdna-agent -t webapp
-  become: yes
+#- name: Add LogDNA tag for webapp
+#  shell: logdna-agent -t webapp
+#  become: yes
 
-- name: restart LogDNA
-  shell: service logdna-agent restart
-  become: yes
+#- name: restart LogDNA
+#  shell: service logdna-agent restart
+#  become: yes
 
 - name: Install & Configure sysdig on Webapp server
   shell: |
