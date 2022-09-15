@@ -2,4 +2,3 @@
 # Install MariaDB and configure MariaDB replicadb for wordpress
 
 - include: create-wordpress-db.yaml
-#- include: configure-replication-replicadb.yaml

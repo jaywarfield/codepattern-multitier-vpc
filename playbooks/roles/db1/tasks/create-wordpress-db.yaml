@@ -1,11 +1,6 @@
 ---
 # Basic Setup of MySQL
 
-#- name: Change mysqld.cnf to listen on all interfaces
-#  shell: |
-#    sed -i "s/^\(bind-address\s*=\s*\).*\$/\10.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
-#  become: yes
-
 - name: Install required packages
   dnf:
     name:
@@ -32,13 +27,11 @@
   mysql_db:
     name: wordpress
     login_user: root
-    #login_unix_socket: /var/run/mysqld/mysqld.sock
     state: present
 
 - name: Create wordpress user
   mysql_user:
     login_user: root
-    #login_unix_socket: /var/run/mysqld/mysqld.sock
     name: wpuser
     password: "{{ dbpassword }}"
     priv: 'wordpress.*:ALL,GRANT'
