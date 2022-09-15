@@ -1,14 +1,6 @@
 ---
 # Basic Setup of MySQL
 
-- name: Install required packages
-  dnf:
-    name:
-      - mariadb-server
-      - python3-pip
-      - python3-PyMySQL
-    state: latest
-
 - name: Install required pip modules
   pip:
     name:
@@ -16,13 +8,13 @@
     state: present
     executable: pip3
 
-- name: Ensure mariadb service is running
+- name: Ensure MySQL service is running
   systemd:
-    name: mariadb
-    state: started
+    name: mysqld
+    state: restarted
     enabled: yes
 
-- name: Set mariadb root password
+- name: Set MySQL root password
   mysql_user:
     login_user: root
     login_password: "{{ dbpassword }}" 

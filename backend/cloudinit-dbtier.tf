@@ -7,13 +7,13 @@ data "template_cloudinit_config" "cloudinit-dbtier" {
 #cloud-config
 package_update: true
 package_upgrade: true
-#packages:
-# - mysql-server
-# - mysql
-# - python3-PyMySQL
+packages:
+ - mysql-server
+ - python3-pip
+ - python3-PyMySQL
 
-#runcmd:
-# - /bin/systemctl enable mysqld
+runcmd:
+ - /bin/systemctl enable mysqld
 
 power_state:
  mode: reboot

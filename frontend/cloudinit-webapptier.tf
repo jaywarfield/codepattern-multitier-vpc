@@ -8,7 +8,8 @@ data "template_cloudinit_config" "cloudinit-webapptier" {
 package_update: true
 package_upgrade: true
 packages:
-# - mysql-client
+#- mysql-client
+ - mysql
  - nginx
  - php
  - php-fpm
