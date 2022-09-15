@@ -8,6 +8,13 @@
       - python3-PyMySQL
     state: latest
 
+- name: Install required pip modules
+  pip:
+    name:
+      - PyMySQL
+    state: present
+    executable: pip3
+
 - name: Ensure mariadb service is running
   systemd:
     name: mariadb
