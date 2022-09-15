@@ -17,10 +17,10 @@
 - name: Set mariadb root password
   mysql_user:
     login_user: root
-    login_password: {{ dbpassword }} 
+    login_password: "{{ dbpassword }}" 
     user: root
     check_implicit_admin: true
-    password: {{ dbpassword }}
+    password: "{{ dbpassword }}"
     host: localhost
 
 - name: Create wordpress database on the server
