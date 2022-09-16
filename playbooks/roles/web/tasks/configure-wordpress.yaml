@@ -1,13 +1,13 @@
 ---
-# Configure wordpress stuff
-#- name: Create Wordpress Directory
-#  file:
-#    path: /var/www/
-#    state: directory
-#    owner: www-data
-#    group: www-data
-#    mode: 0775
-#    recurse: yes
+# Configure wordpress directory
+- name: Create Wordpress Directory
+  file:
+    path: /var/www/
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: 0775
+    recurse: yes
 
 - name: Download and untar Wordpress distro
   unarchive:
