@@ -9,8 +9,11 @@ package_update: true
 package_upgrade: true
 packages:
  - mysql-server
- - python3-pip
- - python3-PyMySQL
+ - mysql-devel
+ - python39
+ - python39-devel
+ - python39-pip
+ - python39-PyMySQL
 
 runcmd:
  - /bin/systemctl enable mysqld
