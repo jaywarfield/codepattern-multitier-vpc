@@ -1,4 +1,4 @@
 ---
-# Install MariaDB and configure MariaDB sourcedb for wordpress
+# Install MySQL and configure MySQL sourcedb for wordpress
 
 - include: create-wordpress-db.yaml

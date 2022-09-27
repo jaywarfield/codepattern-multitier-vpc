@@ -1,5 +1,5 @@
 ---
-# Basic Setup of MySQL
+# Basic setup of MySQL
 
 - name: Install required pip modules
   pip:
