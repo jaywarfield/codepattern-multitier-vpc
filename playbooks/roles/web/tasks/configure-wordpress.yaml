@@ -18,7 +18,7 @@
 - name: Download Wordpress distro
   become: yes
   get_url:
-    src: http://wordpress.org/latest.tar.gz
+    url: http://wordpress.org/latest.tar.gz
     dest: /var/www/html
     mode: 0755
     group: vpcuser
