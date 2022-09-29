@@ -14,19 +14,21 @@ bootcmd:
   # apt-cache policy libssl1.0-dev
   # apt-get install libssl1.0-dev
   # Create Wordpress directory
-  - mkdir /var/www
-  - chown www-data:www-data /var/www
-  - chmod 0775 /var/www
+  #- mkdir /var/www
+  #- chown www-data:www-data /var/www
+  #- chmod 0775 /var/www
 
 package_update: true
 package_upgrade: true
 packages:
-#- mysql-client
+ - curl
+ - httpd
  - mysql
- - nginx
  - php
  - php-fpm
-# - php-mysqlnd
+ - php-json
+ - php-mysqlnd
+ - tar
  - unit
  - unit-dev
  - unit-jsc-common
@@ -34,9 +36,12 @@ packages:
  - unit-php
 
 runcmd:
- - /bin/systemctl enable nginx
+# - /bin/systemctl enable nginx
  - /bin/systemctl enable php-fpm
  - /bin/firewall-cmd --add-port=80/tcp --permanant
+ - /bin/firewall-cmd --reload
+ - /bin/systemctl start httpd
+ - /bin/systemctl enable httpd
 
 power_state:
  mode: reboot
