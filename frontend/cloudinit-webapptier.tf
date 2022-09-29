@@ -21,19 +21,18 @@ bootcmd:
 package_update: true
 package_upgrade: true
 packages:
- - curl
+ - firewalld
  - httpd
  - mysql
  - php
  - php-fpm
  - php-json
  - php-mysqlnd
- - tar
- - unit
- - unit-dev
- - unit-jsc-common
- - unit-jsc8
- - unit-php
+# - unit
+# - unit-dev
+# - unit-jsc-common
+# - unit-jsc8
+# - unit-php
 
 runcmd:
 # - /bin/systemctl enable nginx
