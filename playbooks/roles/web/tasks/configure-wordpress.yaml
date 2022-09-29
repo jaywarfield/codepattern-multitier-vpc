@@ -9,10 +9,20 @@
 #    mode: 0775
 #    recurse: yes
 
-- name: Download and untar Wordpress distro
-  unarchive:
+#- name: Download and untar Wordpress distro
+#  unarchive:
+#    src: http://wordpress.org/latest.tar.gz
+#    dest: /var/www/html
+#    remote_src: yes
+
+- name: Download Wordpress distro
+  become: yes
+  get_url:
     src: http://wordpress.org/latest.tar.gz
     dest: /var/www/html
+    mode: 0755
+    group: vpcuser
+    owner: vpcuser
     remote_src: yes
 
 - name: Copy wp-config.php to server
