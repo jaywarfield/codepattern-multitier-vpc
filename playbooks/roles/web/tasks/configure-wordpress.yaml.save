@@ -1,13 +1,13 @@
 ---
 # Setup wordpress
-- name: Create Wordpress directory
-  file:
-    path: /var/www/
-    state: directory
-    owner: vpcuser
-    group: vpcuser
-    mode: 0775
-    recurse: yes
+#- name: Create Wordpress directory
+#  file:
+#    path: /var/www/
+#    state: directory
+#    owner: www-data
+#    group: www-data
+#    mode: 0775
+#    recurse: yes
 
 - name: Download and untar Wordpress distro
   unarchive:
@@ -19,8 +19,8 @@
   copy:
     src: wp-config.php.txt
     dest: /var/www/wordpress/wp-config.php
-    owner: vpcuser
-    group: vpcuser
+    owner: www-data
+    group: www-data
     mode: 0755
 
 - name: Copy wordpress.config to server
@@ -35,16 +35,16 @@
   copy:
     src: db-config.php.txt
     dest: /var/www/wordpress/db-config.php
-    owner: vpcuser
-    group: vpcuser
+    owner: www-data
+    group: www-data
     mode: 0755
 
 - name: Copy db-php
   copy:
     src: db.php.txt
     dest: /var/www/wordpress/wp-content/db.php
-    owner: vpcuser
-    group: vpcuser
+    owner: www-data
+    group: www-data
     mode: 0755
 
 - name: Modify wp-config for source db
@@ -67,9 +67,9 @@
 
 - name: Set wordpress file permissions
   shell: |
-    chown -R vpcuser:vpcuser /var/www/wordpress
+    chown -R www-data:www-data /var/www/wordpress
     find /var/www/wordpress -type d -exec chmod g+s {} \;
-    chown -R vpcuser:vpcuser /var/www/wordpress
+    chown -R www-data:www-data /var/www/wordpress
     chmod g+w /var/www/wordpress/wp-content
     chmod -R g+w /var/www/wordpress/wp-content/themes
     chmod -R g+w /var/www/wordpress/wp-content/plugins
