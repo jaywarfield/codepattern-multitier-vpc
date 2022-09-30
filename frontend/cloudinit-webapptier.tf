@@ -22,8 +22,9 @@ package_update: true
 package_upgrade: true
 packages:
  - firewalld
- - httpd
+#- httpd
  - mysql
+ - nginx
  - php
  - php-fpm
  - php-json
