@@ -1,14 +1,5 @@
 ---
 # Setup wordpress
-#- name: Create Wordpress directory
-#  file:
-#    path: /var/www/
-#    state: directory
-#    owner: vpcuser
-#    group: vpcuser
-#    mode: 0775
-#    recurse: yes
-
 - name: Download and untar Wordpress distro
   unarchive:
     src: http://wordpress.org/latest.tar.gz

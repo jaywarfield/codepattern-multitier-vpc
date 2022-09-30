@@ -22,31 +22,19 @@ package_update: true
 package_upgrade: true
 packages:
  - firewalld
-#- httpd
+ - httpd
  - mysql
- - nginx
  - php
  - php-fpm
  - php-json
  - php-mysqlnd
- - python3
-# - wget
-# - unit
-# - unit-dev
-# - unit-jsc-common
-# - unit-jsc8
-# - unit-php
+ - python39
 
 runcmd:
-# - /bin/wget http://wordpress.org/latest.tar.gz 
-# - /bin/tar -xvf latest.tar.gz
-# - /bin/mv wordpress /var/www/html
-# - /bin/systemctl enable nginx
- - /bin/systemctl enable php-fpm
- - /bin/firewall-cmd --add-port=80/tcp --permanant
- - /bin/firewall-cmd --reload
  - /bin/systemctl start httpd
  - /bin/systemctl enable httpd
+ - /bin/firewall-cmd --add-port=80/tcp --permanant
+ - /bin/firewall-cmd --reload
 
 power_state:
  mode: reboot
