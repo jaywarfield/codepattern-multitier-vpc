@@ -33,6 +33,7 @@
 - name: Create wordpress user
   mysql_user:
     login_user: root
+    login_password: "{{ dbpassword }}" 
     name: wpuser
     password: "{{ dbpassword }}"
     priv: 'wordpress.*:ALL,GRANT'
