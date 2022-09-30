@@ -27,6 +27,8 @@
   mysql_db:
     name: wordpress
     login_user: root
+    login_password: "{{ dbpassword }}" 
+    user: root
     state: present
 
 - name: Create wordpress user
