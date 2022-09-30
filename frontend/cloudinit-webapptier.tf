@@ -28,6 +28,8 @@ packages:
  - php-fpm
  - php-json
  - php-mysqlnd
+ - python3
+ - wget
 # - unit
 # - unit-dev
 # - unit-jsc-common
@@ -35,6 +37,9 @@ packages:
 # - unit-php
 
 runcmd:
+ - /bin/wget http://wordpress.org/latest.tar.gz 
+ - /bin/tar -xvf latest.tar.gz
+ - /bin/mv wordpress /var/www/html
 # - /bin/systemctl enable nginx
  - /bin/systemctl enable php-fpm
  - /bin/firewall-cmd --add-port=80/tcp --permanant
