@@ -1,20 +1,29 @@
 ---
 # Setup wordpress
-- name: Download and untar Wordpress distro
-  unarchive:
-    src: http://wordpress.org/latest.tar.gz
-    dest: /var/www/html
-    remote_src: yes
+#- name: Create Wordpress directory
+#  file:
+#    path: /var/www/
+#    state: directory
+#    owner: vpcuser
+#    group: vpcuser
+#    mode: 0775
+#    recurse: yes
 
-- name: Download Wordpress distro
-  become: yes
-  get_url:
-    url: http://wordpress.org/latest.tar.gz
-    dest: /var/www/html
-    mode: 0755
-    group: vpcuser
-    owner: vpcuser
-    remote_src: yes
+#- name: Download and untar Wordpress distro
+#  unarchive:
+#    src: http://wordpress.org/latest.tar.gz
+#    dest: /var/www/html
+#    remote_src: yes
+
+#- name: Download Wordpress distro
+#  become: yes
+#  get_url:
+#    url: http://wordpress.org/latest.tar.gz
+#    dest: /var/www/html
+#    mode: 0755
+#    group: vpcuser
+#    owner: vpcuser
+#    remote_src: yes
 
 - name: Copy wp-config.php to server
   copy:
