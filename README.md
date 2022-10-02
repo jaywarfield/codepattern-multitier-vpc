@@ -19,8 +19,6 @@ Application products used include:
 
 - [LAMP stack](https://www.ibm.com/cloud/learn/lamp-stack-explained) with Linux, MySQL, and PHP.
 - [Apache](https://apache.org/) is used as the Web Server.
-<!-- - [NGINX](https://www.nginx.com/) is used as the Web Server. -->
-<!-- - [NGINX Unit](https://www.nginx.com/products/nginx-unit/) is used as the Application Server. -->
 - [WordPress](https://wordpress.com) (popular web, blog and e-commerce platform) demonstrates horizontal scalability across zones.
 - [MySQL](https://www.mysql.com) (typical open source database) demonstrates multiple database servers and replication strategy across zones.
 
