@@ -18,8 +18,9 @@ Infrastructure features used include:
 Application products used include:
 
 - [LAMP stack](https://www.ibm.com/cloud/learn/lamp-stack-explained) with Linux, MySQL, and PHP.
-- [NGINX](https://www.nginx.com/) is used as the Web Server.
-- [NGINX Unit](https://www.nginx.com/products/nginx-unit/) is used as the Application Server.
+- [Apache](https://apache.org/) is used as the Web Server.
+<!-- - [NGINX](https://www.nginx.com/) is used as the Web Server. -->
+<!-- - [NGINX Unit](https://www.nginx.com/products/nginx-unit/) is used as the Application Server. -->
 - [WordPress](https://wordpress.com) (popular web, blog and e-commerce platform) demonstrates horizontal scalability across zones.
 - [MySQL](https://www.mysql.com) (typical open source database) demonstrates multiple database servers and replication strategy across zones.
 
@@ -53,10 +54,11 @@ When you have completed this code pattern, you will understand:
 2. The website invokes Global LB.
 3. Global LB invokes Public ALB.
 4. Public ALB balances load to frontend VSIs across zones.
-5. Frontend VSIs have NGINX, NGINX Unit, and Wordpress configured to implement the website.
+<!-- 5. Frontend VSIs have NGINX, NGINX Unit, and Wordpress configured to implement the website. -->`
+5. Frontend VSIs have Apache and Wordpress configured to implement the website.
 6. Frontend VSIs use the source database in the backend VSI.
-7. Frontend VSIs use the replica database in the backend VSI when necessary.
-8. Source and replica Databases are configured for replication across zones.
+7. (Future) Frontend VSIs use the replica database in the backend VSI when necessary.
+8. (Future) Source and replica Databases are configured for replication across zones.
 
 <!--Optionally, update this section when the video is created-->
 <!--
@@ -109,7 +111,7 @@ Use the **Deploy to IBM Cloud** button **OR** create the services and run locall
 Clone the `codepattern-multitier-vpc` repo locally. In a terminal, run:
 
 ```bash
-git clone https://github.com/codpattern-multitier-vpc
+git clone https://github.com/IBM/codepattern-multitier-vpc
 ```
 
 <!--
